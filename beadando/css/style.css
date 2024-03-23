@@ -46,6 +46,7 @@ body {
     background-color: #dedede;
     border-radius: 50px;
 }
+
 .logo:hover {
     transition: all 0.3s ease-in;
     background-color: #8e8e8e;
@@ -69,7 +70,7 @@ nav {
     padding: 15px 0;
 }
 
-header a img{
+header a img {
     height: 40px;
     width: 40px;
     padding: 5px;
@@ -77,12 +78,12 @@ header a img{
     border-radius: 20px;
 }
 
-.nav_links{
+.nav_links {
     margin: 0;
     list-style: none;
 }
 
-.nav_links li{
+.nav_links li {
     display: inline;
     padding: 5px 5px;
 }
@@ -121,7 +122,7 @@ header a img{
     background-color: #dedede;
 }
 
-.login:hover{
+.login:hover {
     transition: all 0.3s ease-in;
     height: 40px;
     width: 40px;
@@ -147,9 +148,14 @@ header a img{
 }
 
 
-.mySlides {display: none;}
+.mySlides {
+    display: none;
+}
 
-img [alt="reklam"] {vertical-align: middle; z-index: -1;}
+img [alt="reklam"] {
+    vertical-align: middle;
+    z-index: -1;
+}
 
 .fade {
     animation-name: fade;
@@ -157,12 +163,17 @@ img [alt="reklam"] {vertical-align: middle; z-index: -1;}
 }
 
 @keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
 }
 
 .panel {
-    box-shadow: rgba(0,0,0,0.403) 0px 10px 20px;
+    box-shadow: rgba(0, 0, 0, 0.403) 0px 10px 20px;
     margin: 3rem 5rem;
     padding: 2rem;
     border-radius: 2rem;
@@ -174,17 +185,18 @@ img [alt="reklam"] {vertical-align: middle; z-index: -1;}
     z-index: -1;
 }
 
-.panel img{
+.panel img {
     width: 380px;
     height: 400px;
 }
 
 
-#index_1pic{
+#index_1pic {
     float: left;
     margin: 50px 100px;
 }
-#index_2pic{
+
+#index_2pic {
     float: right;
     margin: 50px 100px;
 }
@@ -201,7 +213,7 @@ img [alt="reklam"] {vertical-align: middle; z-index: -1;}
     float: left;
 }
 
-table{
+table {
     border-collapse: collapse;
     max-width: 100%;
     margin-left: 125px;
@@ -209,33 +221,37 @@ table{
     table-layout: fixed;
 }
 
-.tabla{
+.tabla {
     overflow-x: auto;
-    display: compact;
+    display: flex;
 }
 
-.tabla:after{
+.tabla:after {
     content: "";
     display: table;
     clear: both;
 }
 
-th{
+th {
     padding: 30px;
     border-bottom: 1px solid black;
     text-align: center;
 }
-tr td{
+
+tr td {
     padding: 15px;
     text-align: center;
 }
-#FFmeret , #Noimeret{
+
+#FFmeret,
+#Noimeret {
     float: right;
     margin: 5% 20%;
     max-width: 100%;
     height: auto;
     width: 330px;
 }
+
 /*Tablazat*/
 
 /* Index */
@@ -265,14 +281,30 @@ section iframe {
 }
 
 @keyframes becsuszas {
-    0%   {left:1000px; top:0px;}
-    50%  {left:500px; top:0px;}
-    100% {left:0px; top:0px;}
+    0% {
+        left: 1000px;
+        top: 0px;
+    }
+
+    50% {
+        left: 500px;
+        top: 0px;
+    }
+
+    100% {
+        left: 0px;
+        top: 0px;
+    }
 }
 
 @keyframes homaly {
-    0%      {opacity: 0}
-    100%    {opacity: 1}
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
 }
 
 #idezet {
@@ -285,7 +317,7 @@ section iframe {
     align-items: center;
 }
 
-.panel [class="kep bal"]~div{
+.panel [class="kep bal"]~div {
     clear: right;
     padding-left: 500px;
     padding-right: 50px;
@@ -293,7 +325,7 @@ section iframe {
 
 .panel [class="kep jobb"]~div {
     padding-left: 50px;
- }
+}
 
 .panel [class="kep jobb"]~div p {
     text-align: justify;
@@ -301,7 +333,7 @@ section iframe {
     letter-spacing: 1px;
 }
 
-.panel>div>h2{
+.panel>div>h2 {
     color: #555555;
     margin-top: 10px;
     font-weight: 700;
@@ -412,6 +444,7 @@ form button:hover {
     margin: 5px;
     cursor: pointer;
 }
+
 .social-icons img:hover {
     height: 28px;
     width: 28px;
@@ -472,25 +505,32 @@ form button:hover {
 }
 
 @media screen and (max-width: 600px) {
-    .column.shortside, .column.longside {
+
+    .column.shortside,
+    .column.longside {
         width: 100%;
     }
 }
 
 /*------------------Kapcsolat------------------*/
-.blank{
-    float: right;
-    margin: 200px;
+.blank {
+    float: none;
+    margin: auto;
     width: 400px;
 }
-#full-name, #email, #message{
-    position: center;
+
+#full-name,
+#email,
+#message {
+    position: initial;
     width: 300px;
     border: 1px solid black;
     text-align: left;
-    margin:20px 50px;
+    margin: 20px 50px;
 }
-#submit, #reset {
+
+#submit,
+#reset {
     background-color: white;
     width: 130px;
     /* border: 1px solid black;*/
@@ -498,64 +538,78 @@ form button:hover {
     margin: 20px 34px;
     border: 1px solid black;
 }
-.blank form fieldset input #reset{
+
+.blank form fieldset input #reset {
     transition-duration: 0.7s;
 }
+
 .blank form fieldset input #reset:hover {
     transition: all 0.3s ease-in;
     color: #0088a9;
     border: 4px solid #8e8e8e;
 }
-.blank form fieldset input #submit{
+
+.blank form fieldset input #submit {
     transition-duration: 0.7s;
 }
+
 .blank form fieldset input #submit:hover {
     transition: all 0.3s ease-in;
     color: #0088a9;
     border: 4px solid #8e8e8e;
 }
-.contact_us_text{
-    margin: 150px 0 150px 100px;
-    float: left;
+
+.contact_us_text {
+    margin: auto;
+    float: none;
     text-align: center;
     font-size: 20px;
     width: 1000px;
 }
-h2{
+
+h2 {
     margin-top: 50px;
 }
-#other_contact{
+
+#other_contact {
     width: 100px;
     margin-left: 440px;
 }
+
 /*----signup----*/
-.signup form fieldset{
+.signup form fieldset {
     width: 500px;
     margin: 50px auto auto auto;
 }
 
-.signup form fieldset label{
+.signup form fieldset label {
     text-align: center;
 }
-.signup form fieldset input{
-    position: center;
+
+.signup form fieldset input {
+    position: initial;
     border: solid 1px black;
     text-align: center;
     margin: 15px 35px;
 }
 
-#option1, #option2, #option3{
+#option1,
+#option2,
+#option3 {
     width: 10px;
     height: 10px;
     text-align: center;
 }
-.signup form input{
+
+.signup form input {
     margin: auto;
-    position: center;
+    position: initial;
     border: solid 1px black;
     text-align: center;
 }
-#signup_reset:hover, #signup_submit:hover{
+
+#signup_reset:hover,
+#signup_submit:hover {
     transition: all 0.3s ease-in;
     color: #0088a9;
     border: 4px solid #8e8e8e;
@@ -569,51 +623,61 @@ h2{
         flex-wrap: wrap;
         justify-content: center;
     }
+
     table {
         max-width: 500px;
         flex: 1 0 auto;
         margin: 10px;
     }
+
     img {
         flex: 0 0 200px;
         margin: 10px;
     }
 }
+
 table {
     font-size: 1em;
     font-family: Arial, sans-serif;
     color: #333;
 }
+
 img {
     max-width: 100%;
     height: auto;
 }
+
 @media screen and (max-width: 1232px) {
     table {
         max-width: 300px;
     }
 }
+
 @media screen and (max-width: 1232px) {
     .container {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
     }
+
     table {
         max-width: 300px;
         flex: 1 0 auto;
         margin: 10px;
     }
+
     img {
         flex: 0 0 200px;
         margin: 10px;
     }
 }
+
 table {
     font-size: 1em;
     font-family: Arial, sans-serif;
     color: #333;
 }
+
 img {
     max-width: 100%;
     height: auto;
@@ -623,11 +687,14 @@ img {
 
 
 @media print {
-    #header, nav, img {
+
+    #header,
+    nav,
+    img {
         display: none;
     }
 
-    .panel [class="kep bal"]~div{
+    .panel [class="kep bal"]~div {
         padding: 50px;
     }
 
@@ -640,5 +707,7 @@ img {
         line-height: 1.3;
     }
 
-    ul {list-style: none}
+    ul {
+        list-style: none
+    }
 }
