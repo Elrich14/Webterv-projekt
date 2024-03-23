@@ -190,7 +190,6 @@ img [alt="reklam"] {
     height: 400px;
 }
 
-
 #index_1pic {
     float: left;
     margin: 50px 100px;
@@ -309,6 +308,8 @@ section iframe {
 
 #idezet {
     text-align: center;
+    width: 100%;
+    display: table;
 }
 
 .szoveg {
