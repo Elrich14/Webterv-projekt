@@ -355,6 +355,56 @@ section iframe {
 
 /* Index */
 
+/*-----SIGNUP-----*/
+
+.signup form {
+    width: 100%;
+    position: center;
+}
+
+.signup form fieldset {
+    width: 30vw;
+    margin: 3vw auto auto auto;
+
+}
+
+.signup form fieldset label {
+    text-align: center;
+    font-size: 1vw;
+}
+
+.signup form fieldset input {
+    position: center;
+    font-size: 1vw;
+    text-align: center;
+    margin: 15px 35px;
+
+    width: 25vw;
+    height: 3vw;
+    border-radius: 4vw;
+    outline: none;
+    border: none;
+}
+
+#F,
+#N,
+#E {
+    width: 1.1vw;
+    height: 1.1vw;
+    margin: 0 1vw 0 0.3vw;
+    text-align: center;
+}
+
+#signup_reset:hover,
+#signup_submit:hover {
+    transition: all 0.3s ease-in;
+    color: #0088a9;
+    border: 0.3vw solid #8e8e8e;
+}
+
+/*------SIGNUP-------*/
+
+
 /*
     --------------------footer--------------------
 */

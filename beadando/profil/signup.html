@@ -44,7 +44,39 @@
     </div>
 
     <div id="content">
+        <div class="signup">
+            <form method="POST">
+                <fieldset>
+                    <legend>Regisztráció</legend>
+                    <label for="username">Felhasználónév:</label> <br>
+                    <input type="text" id="username" name="username" placeholder="felhasználó123"> <br>
 
+                    <label for="signup_email">E-mail cím:</label> <br>
+                    <input type="email" id="signup_email" name="signup_email" placeholder="valami@gmail.com"> <br>
+
+                    <label for="password">Jelszó:</label> <br>
+                    <input type="password" id="password" name="password" minlength="6" placeholder="Min. 6 karakter"> <br>
+
+                    <label for="password-check">Jelszó újra:</label> <br>
+                    <input type="password" id="password_check" name="password_check" minlength="6"> <br>
+
+                    <label for="date_of_birth">Születési dátum:</label> <br>
+                    <input type="date" id="date_of_birth" name="date_of_birth"> <br>
+
+                    Nem:<br>
+                    <label for="F">Férfi:</label>
+                    <input type="radio" id="F" name="sex" value="F">
+                    <label for="N">Nő:</label>
+                    <input type="radio" id="N" name="sex" value="N">
+                    <label for="E">Egyéb:</label>
+                    <input type="radio" id="E" name="sex" value="E">
+
+                    <input type="reset" name="signup_reset" id="signup_reset" value="Alaphelyzet">
+                    <input type="submit" name="signup_submit" id="signup_submit" value="Regisztráció">
+                    <p>Vagy ha már van fiókod akkor jelentkezz be <a href="./login.html">itt!</a></p>
+                </fieldset>
+            </form>
+        </div>
     </div>
 
     <script>
