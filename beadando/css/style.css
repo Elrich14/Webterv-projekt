@@ -53,6 +53,7 @@ body {
 }
 
 header {
+    z-index: 100;
     padding: 0 10%;
     display: flex;
     justify-content: space-between;
@@ -619,6 +620,89 @@ form button:hover {
         width: 100%;
     }
 }
+
+/*------Ruhák--------*/
+
+.ruhak div {
+    padding: 3vw 1vw;
+}
+
+.picture-box {
+    width: 25%;
+    min-width: 25vw;
+    margin: 2vw 1vw 2vw 1vw;
+    background-color: white;
+    border-radius: 5%;
+}
+
+.picture-box>img {
+    object-fit: cover;
+    width: 100%;
+    height: 25vw;
+    border-radius: 5%;
+}
+
+.ruhak {
+    z-index: -1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+/* Egymás mellé megfelelően */
+
+[type="image"] {
+    width: 2vw;
+    height: 2vw;
+    float: right;
+    margin-right: 3vw;
+    border-radius: 20%;
+}
+
+[type="image"]:hover {
+    transform: scale(1.1);
+    transition: all .2s ease-in-out;
+}
+
+.picture-box h2 {
+    font-size: 2vw;
+    margin: 2vw 0;
+    text-align: center;
+}
+
+.picture-box p {
+    text-align: center;
+    font-size: 2vw;
+    margin: 0;
+    float: left;
+}
+
+.gallery:hover {
+    transform: scale(1.1);
+    transition: all .2s ease-in-out;
+}
+
+.gallery img {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media print {
+    header {
+        display: none;
+    }
+
+    video,
+    audio {
+        display: none;
+    }
+}
+
+/*------Ruhák--------*/
 
 /*------------------Kapcsolat------------------*/
 .blank {
