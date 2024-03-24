@@ -51,13 +51,16 @@
             <fieldset>
                 <legend>Jelszóváltás:</legend><br>
                 
-                <label for="oldpsw">Add meg a régi jelszavad!</label> <br>
+                <label for="oldpsw">Régi jelszavad:</label> <br>
                 <input type="password" placeholder="Régi jelszó" name="old" id="oldpsw" required><br>
                 
-                <label for="newpsw">Add meg az új jelszavad!<br>
+                <label for="newpsw">Új jelszavad:<br>
                     (Min. 6 karakter, tartalmaznia kell számot és betűtis)
                 </label><br>
                 <input type="password" placeholder="Új jelszó" name="new" id="newpsw" required><br>
+
+                <label for="password_check">Jelszó újra:</label> <br>
+                <input type="password" placeholder="Régi jelszó újra" name="password_check"  id="password_check" minlength="6" required><br>
                 
                 <input type="submit" name="pswchange" id="pswchange" value="Új jelsző létrehozása">
             </fieldset>
