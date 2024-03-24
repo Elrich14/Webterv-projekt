@@ -418,12 +418,13 @@ section iframe {
 
 .profil form {
     float: left;
-    margin: 2vw 1vw 3vw 3vw;
+    margin: 0 1vw 0 3vw;
     text-align: center;
 }
 
 .profil form input {
     font-size: 1.2vw;
+    margin: 2vw 4.5vw 1vw 0;
     margin: 1vw;
     width: 25vw;
     height: 3vw;
@@ -432,49 +433,20 @@ section iframe {
     border: none;
 }
 
-#pswchange:hover {
+#password_change {
+    margin: 2vw 2vw;
+}
+
+
+
+input[type="submit"]:hover {
     transition: all 0.3s ease-in;
     color: #0088a9;
     border: 0.3vw solid #8e8e8e;
 }
 
-#logout {
-    float: right;
-    font-size: 1.2vw;
-
-    margin: 2vw 4.5vw 1vw 0;
-    width: 15vw;
-    height: 3vw;
-    border-radius: 4vw;
-    outline: none;
-    border: none;
-}
-
-#logout:hover {
-    transition: all 0.3s ease-in;
-    color: #0088a9;
-    border: 0.3vw solid #8e8e8e;
-}
-
-.profil #del {
-    float: right;
-    margin: 0 3.5vw;
-    font-size: 1.5vw;
-}
-
-.profil #delete {
-    font-size: 1.2vw;
-    width: 25vw;
-    height: 3vw;
-    border-radius: 4vw;
-    outline: none;
-    border: none;
-}
-
-.profil #delete:hover {
-    transition: all 0.3s ease-in;
-    color: #0088a9;
-    border: 0.3vw solid #8e8e8e;
+.top {
+    padding-top: 7vw;
 }
 
 .profil h2 {

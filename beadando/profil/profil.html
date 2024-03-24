@@ -39,10 +39,7 @@
         </header>
     </div>
 
-    <div class="profil">
-        
-        <a href="logout.php" id="logout">Kijelentkezés</a>
-
+    <div class="profil">      
         <h2>A felhasználó adatai:</h2>
         <ul>
             <li><b>Felhasználónév: </b> Lajos</li>
@@ -50,7 +47,7 @@
             <li><b>Jelszó: </b> alajoslajos</li>
         </ul>
 
-        <form action="profil.html" method="POST">
+        <form action="profil.html" method="POST" id="password_change">
             <fieldset>
                 <legend>Jelszóváltás:</legend><br>
                 
@@ -66,10 +63,16 @@
             </fieldset>
         </form>
 
-        <form method="POST" id="del">
-            <label for="delete"><b>Fiók törlése:</b></label><br>
-            <input type="submit" name="delete" id="delete" value="Fiok törlés">
-        </form>
+        <div class="top">
+            <form id="logout" action="login.html">
+                <input type="submit" name="logout" value="Kijelentkezés">
+            </form>
+    
+            <form method="POST" id="del">
+                <label for="delete"><b>Fiók törlése:</b></label><br>
+                <input type="submit" name="delete" id="delete" value="Fiok törlés">
+            </form>
+        </div>
     </div>
 
 <script>
