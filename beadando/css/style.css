@@ -404,6 +404,91 @@ section iframe {
 
 /*------SIGNUP-------*/
 
+/*------Profil--------*/
+
+.profil input {
+    max-width: 15vw;
+    font-size: 1vw;
+}
+
+.profil h3 {
+    float: left;
+    text-align: left;
+}
+
+.profil form {
+    float: left;
+    margin: 2vw 1vw 3vw 3vw;
+    text-align: center;
+}
+
+.profil form input {
+    font-size: 1.2vw;
+    margin: 1vw;
+    width: 25vw;
+    height: 3vw;
+    border-radius: 4vw;
+    outline: none;
+    border: none;
+}
+
+#pswchange:hover {
+    transition: all 0.3s ease-in;
+    color: #0088a9;
+    border: 0.3vw solid #8e8e8e;
+}
+
+#logout {
+    float: right;
+    font-size: 1.2vw;
+
+    margin: 2vw 4.5vw 1vw 0;
+    width: 15vw;
+    height: 3vw;
+    border-radius: 4vw;
+    outline: none;
+    border: none;
+}
+
+#logout:hover {
+    transition: all 0.3s ease-in;
+    color: #0088a9;
+    border: 0.3vw solid #8e8e8e;
+}
+
+.profil #del {
+    float: right;
+    margin: 0 3.5vw;
+    font-size: 1.5vw;
+}
+
+.profil #delete {
+    font-size: 1.2vw;
+    width: 25vw;
+    height: 3vw;
+    border-radius: 4vw;
+    outline: none;
+    border: none;
+}
+
+.profil #delete:hover {
+    transition: all 0.3s ease-in;
+    color: #0088a9;
+    border: 0.3vw solid #8e8e8e;
+}
+
+.profil h2 {
+    float: left;
+    margin: 10vw 1vw 0 1vw;
+}
+
+.profil ul {
+    float: left;
+    margin: 10vw 2vw 0 1vw;
+}
+
+/*------Profil--------*/
+
 
 /*
     --------------------footer--------------------

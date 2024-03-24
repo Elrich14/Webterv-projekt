@@ -9,39 +9,67 @@
 </head>
 
 <body>
-<div class="Title">
-    <img id="Title" src="../media/image/Title.webp" alt="Birkl & Zentai saját márka.">
-    <header id="navbar">
-        <div>
-            <a href="../index.html"><img class="logo" src="../media/image/logo_without_bg.webp" alt="logo"/></a>
-            <nav>
-                <ul class="nav_links">
-                    <li><a href="../designer.html">Dizájnerek</a></li>
-                    <li><a href="../ruhak.html">Ruhák</a></li>
-                    <li><a href="../meret.html">Méret táblázat</a></li> <!-- Itt lehet táblázat meg stb. leírások -->
-                    <li><a href="../kapcsolat.html">Kapcsolat</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div class="profil">
-            <a class="active" href="login.html"><img class="login" src="../media/image/user.webp" alt="belépés"></a> <!-- ikon jobb oldalon -->
-            <a href="../kosar.html"><img class="kosar" src="../media/image/shopping-cart.webp" alt="kosár"/></a> <!-- ikon jobb oldalon -->
-        </div>
-        <!--
-        <?php if (isset($_SESSION["user"])) { ?>
-        <a href="./profil/profil.php">Profilom</a>
-        <a href="./profil/logout.php">Kijelentkezés</a>
-        <?php } else { ?>
-        <a href="./profil/login.php">Bejelentkezés</a>
-        <a href="./profil/signup.html">Regisztráció</a>
-        <?php } ?>
-        -->
-    </header>
-</div>
+    <div class="Title">
+        <img id="Title" src="../media/image/Title.webp" alt="Birkl & Zentai saját márka.">
+        <header id="navbar">
+            <div>
+                <a href="../index.html"><img class="logo" src="../media/image/logo_without_bg.webp" alt="logo"/></a>
+                <nav>
+                    <ul class="nav_links">
+                        <li><a href="../designer.html">Dizájnerek</a></li>
+                        <li><a href="../ruhak.html">Ruhák</a></li>
+                        <li><a href="../meret.html">Méret táblázat</a></li> <!-- Itt lehet táblázat meg stb. leírások -->
+                        <li><a href="../kapcsolat.html">Kapcsolat</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="profil">
+                <a class="active" href="login.html"><img class="login" src="../media/image/user.webp" alt="belépés"></a> <!-- ikon jobb oldalon -->
+                <a href="../kosar.html"><img class="kosar" src="../media/image/shopping-cart.webp" alt="kosár"/></a> <!-- ikon jobb oldalon -->
+            </div>
+            <!--
+            <?php if (isset($_SESSION["user"])) { ?>
+            <a href="./profil/profil.php">Profilom</a>
+            <a href="./profil/logout.php">Kijelentkezés</a>
+            <?php } else { ?>
+            <a href="./profil/login.php">Bejelentkezés</a>
+            <a href="./profil/signup.html">Regisztráció</a>
+            <?php } ?>
+            -->
+        </header>
+    </div>
 
-<div id="content">
+    <div class="profil">
+        <a href="logout.php"><button type="submit" name="logout" id="logout">Kijelentkezés</button></a>
 
-</div>
+        <h2>A felhasználó adatai:</h2>
+        <ul>
+            <li><b>Felhasználónév: </b> Lajos</li>
+            <li><b>E-mail: </b> lajos@lajos.com</li>
+            <li><b>Jelszó: </b> alajoslajos</li>
+        </ul>
+
+        <form action="profil.html" method="POST">
+            <fieldset>
+                <legend>Jelszóváltás:</legend><br>
+                
+                <label for="oldpsw">Add meg a régi jelszavad!</label> <br>
+                <input type="password" placeholder="Régi jelszó" name="old" id="oldpsw" required><br>
+                
+                <label for="newpsw">Add meg az új jelszavad!<br>
+                    (Min. 6 karakter, tartalmaznia kell számot és betűtis)
+                </label><br>
+                <input type="password" placeholder="Új jelszó" name="new" id="newpsw" required><br>
+                
+                <input type="submit" name="pswchange" id="pswchange" value="Új jelsző létrehozása">
+            </fieldset>
+        </form>
+
+        <form method="POST" id="del">
+            <label for="delete"><b>Fiók törlése:</b></label><br>
+            <input type="submit" name="delete" id="delete" value="Fiok törlés"></input>
+        </form>
+    </div>
 
 <script>
     let navbar = document.getElementById("navbar");
