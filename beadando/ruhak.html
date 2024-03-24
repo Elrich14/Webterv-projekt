@@ -7,6 +7,85 @@
     <meta charset="UTF-8" />
     <link rel="icon" href="./media/image/sloth_logo_white.png" type="image/icon">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        /*------Ruhák--------*/
+
+        *{
+            box-sizing: border-box;
+        }
+
+        .ruhak div{
+            padding: 3vw 1vw;
+        }
+
+        .picture-box{
+            width: 25%;
+            min-width: 25vw;
+            margin: 2vw 1vw 2vw 1vw;
+            background-color: white;
+            border-radius: 5%;
+            z-index: 1;
+        }
+
+        .picture-box>img{
+            object-fit: cover;
+            width: 100%;
+            height: 25vw;
+            border-radius: 5%;
+        }
+
+        .ruhak{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+        /* Egymás mellé megfelelően */
+
+        [type="image"] {
+            width: 2vw;
+            height: 2vw;
+            float: right;
+            margin-right: 3vw;
+            border-radius: 20%;
+        }
+        [type="image"]:hover{
+            transform: scale(1.1);
+            transition: all .2s ease-in-out;
+        }
+
+        .picture-box h2{
+            font-size: 2vw;
+            margin: 2vw 0;
+            text-align: center;
+        }
+
+        .picture-box p{
+            text-align: center;
+            font-size: 2vw;
+            margin: 0;
+            float: left;
+        }
+        .gallery:hover {
+            transform: scale(1.1);
+            transition: all .2s ease-in-out;
+        }
+
+        .gallery img {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @media print {
+            header {display: none;}
+            video, audio { display: none; }
+        }
+
+        /*------Ruhák--------*/
+    </style>
 </head>
 
 <body>
@@ -42,7 +121,77 @@
         </header>
     </div>
 
-    <div id="content">
+    <div class="ruhak">
+
+        <div class="picture-box">
+            <img class="gallery" src="webterv_kepek/pulcsi_1.jpg" alt="Emojis pulóver">
+            <h2>Emojis pulóver</h2>
+            <p>12000Ft</p>
+            <form method="post" action="">
+                <input type="hidden" name="termek" value="Emojis pulóver;12000">
+                <input type="image" src="./media/image/shopping-cart.webp">
+            </form>
+        </div>
+
+        <div class="picture-box">
+            <img class="gallery" src="webterv_kepek/Kabat1.jpg" alt="Q&W kabát">
+            <h2>Q&W kabát</h2>
+            <p>20000Ft</p>
+            <form method="post" action="">
+                <input type="hidden" name="termek" value="Q'&'W;20000">
+                <input type="image" src="./media/image/shopping-cart.webp">
+            </form>
+        </div>
+
+        <div class="picture-box">
+            <img class="gallery" src="webterv_kepek/polo_1.jpg" alt="KCALB 8 póló">
+            <h2>KCALB 8 póló</h2>
+            <p>5000Ft</p>
+            <form method="post" action="">
+                <input type="hidden" name="termek" value="KCALB 8 póló;5000">
+                <input type="image" src="./media/image/shopping-cart.webp">
+            </form>
+        </div>
+
+        <div class="picture-box">
+            <img class="gallery" src="webterv_kepek/polo_2.jpg" alt="Dark line póló">
+            <h2>Dark line póló</h2>
+            <p>5300Ft</p>
+            <form method="post" action="">
+                <input type="hidden" name="termek" value="Dark line póló;5300">
+                <input type="image" src="./media/image/shopping-cart.webp">
+            </form>
+        </div>
+
+        <div class="picture-box">
+            <img class="gallery" src="webterv_kepek/polo_3.jpg" alt="Breaking Bad póló">
+            <h2>Breaking Bad póló</h2>
+            <p>7000Ft</p>
+            <form method="post" action="">
+                <input type="hidden" name="termek" value="Breaking Bad póló;7000">
+                <input type="image" src="./media/image/shopping-cart.webp">
+            </form>
+        </div>
+
+        <div class="picture-box">
+            <img class="gallery" src="webterv_kepek/nadrag_1.jpg" alt="Z&B nadrág">
+            <h2>Z&B nadrág</h2>
+            <p>10500Ft</p>s
+            <form method="post" action="">
+                <input type="hidden" name="termek" value="Z&B nadrág;10500">
+                <input type="image" src="./media/image/shopping-cart.webp">
+            </form>
+        </div>
+
+        <div class="picture-box">
+            <img class="gallery" src="webterv_kepek/nadrag_2.jpg" alt="Laza utcai nadrág több színben">
+            <h2>Laza utcai nadrág több színben</h2>
+            <p>15000Ft</p>
+            <form method="post" action="">
+                <input type="hidden" name="termek" value="Laza utcai nadrág több színben;15000">
+                <input type="image" src="./media/image/shopping-cart.webp">
+            </form>
+        </div>
 
     </div>
 
@@ -73,7 +222,7 @@
                 <a href="./egyeb/csomagell.html">Rendelés ellenőrzése</a>
                 <a href="./egyeb/ajandekkartya.html">Ajándékkártya</a>
             </div>
-    
+
             <div class="col-2">
                 <h2>Feliratkozás</h2> <!-- jobb oldalon textarea plusz gomb -->
                 <form>
@@ -82,7 +231,7 @@
                     <button type="submit">FELIRATKOZÁS</button>
                 </form>
             </div>
-    
+
             <div class="col-3">
                 <h2>Hívj minket!</h2> <!-- jobb oldalon telefonszám -->
                 <p>6724, Kossuth Lajos sgrt. 74 <br>Szeged, Magyarország </p>
@@ -95,15 +244,15 @@
                     <a href="https://wordpress.com/"><img src="./media/image/wordpress.webp" alt="wordpress"></a>
                 </div>
             </div>
-    
+
         </div>
-    
+
         <div id="footerline"> <!-- also sor -->
             <p class="copyright"><a href="./egyeb/terms.html"><span class="terms">Terms &amp; Conditions</span></a><a
                     href="./egyeb/policy.html"><span class="policy">Privacy Policy</span></a>COPYRIGHT &copy; 2024
                 Birkl&amp;Zentai</p>
         </div>
-    
+
     </footer>
 </body>
 

@@ -711,4 +711,8 @@ img {
     ul {
         list-style: none
     }
+
+    iframe {
+        display: none;
+    }
 }
