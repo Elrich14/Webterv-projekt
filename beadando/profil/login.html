@@ -42,16 +42,16 @@
 <div class="signup">
     <form method="POST">
         <fieldset>
-            <legend>Írj üzenetet nekünk</legend>
+            <legend>Bejelentkezés</legend>
             <label for="signup_full-name">Teljes név:</label> <br>
             <input type="text" id="signup_full-name" name="signup_full-name" placeholder="Winch Eszter"/> <br>
             <label for="signup_email">E-mail cím:</label> <br>
             <input type="email" id="signup_email" name="emasignup_emailil" placeholder="valami@gmail.com"/> <br>
             <label for="passw">Jelszó:</label> <br/>
-            <input id="passw" name="passw" minlength="6"/> <br>
+            <input type="password" id="passw" name="passw" minlength="6"/> <br>
             <label for="passw-check">Jelszó újra:</label> <br/>
-            <input id="passw-check" name="passw-check" minlength="6"/> <br>
-            <label for="date_of_birth">Jelszó újra:</label> <br/>
+            <input type="password" id="passw-check" name="passw-check" minlength="6"/> <br>
+            <label for="date_of_birth">Születési dátum</label> <br/>
             <input type="date" id="date_of_birth" name="date_of_birth" maxlength="200"/> <br>
             Nem:<br/>
             <label for="option1">Férfi:</label>
@@ -62,6 +62,7 @@
             <input type="radio" id="option3" name="sex" value="e" checked>
             <input type="reset" id="signup_reset"/>
             <input type="submit" id="signup_submit"/>
+            <a href="./signup.html">Regisztrálj itt!</a>
         </fieldset>
 
 
