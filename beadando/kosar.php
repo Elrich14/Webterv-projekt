@@ -1,64 +1,100 @@
-<!DOCTYPE html>
+<?php
+    require_once("./php/head.php");
+    session_start();
 
-<html lang="hu">
+    if (isset($_SESSION['logged_in'])) {
 
-<head>
-    <title>Dizájnerek</title>
-    <meta charset="UTF-8">
-    <link rel="icon" href="./media/image/sloth_logo_white.png" type="image/icon">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-
-<body>
-    <div class="Title">
-        <img id="Title" src="./media/image/Title.webp" alt="Birkl & Zentai saját márka.">
-        <header id="navbar">
-            <div>
-                <a href="index.html"><img class="logo" src="./media/image/logo_without_bg.webp" alt="logo"></a>
-                <nav>
-                    <ul class="nav_links">
-                        <li><a href="designer.html">Dizájnerek</a></li>
-                        <li><a href="ruhak.html">Ruhák</a></li>
-                        <li><a href="meret.html">Méret táblázat</a></li> <!-- Itt lehet táblázat meg stb. leírások -->
-                        <li><a href="kapcsolat.html">Kapcsolat</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="profil">
-                <a href="profil/login.html"><img class="login" src="./media/image/user.webp" alt="belépés"></a>
-                <!-- ikon jobb oldalon -->
-                <a href="kosar.html"><img class="kosar active" src="./media/image/shopping-cart.webp" alt="kosár"></a>
-                <!-- ikon jobb oldalon -->
-            </div>
-            <!--
-        <?php if (isset($_SESSION["user"])) { ?>
-        <a href="./profil/profil.html">Profilom</a>
-        <a href="./profil/logout.html">Kijelentkezés</a>
-        <?php } else { ?>
-        <a href="./profil/login.html">Bejelentkezés</a>
-        <a href="./profil/signup.html">Regisztráció</a>
-        <?php } ?>
-        -->
-        </header>
-    </div>
-
-    <div id="content">
-
-    </div>
-
-    <script>
-        let navbar = document.getElementById("navbar");
-        let navPos = navbar.offsetTop;
-
-        window.addEventListener("scroll", e => {
-            let scrollPos = window.scrollY;
-            if (scrollPos > navPos) {
-                navbar.classList.add('sticky');
+        if (isset($_POST['termek']) && isset($_POST['mennyiseg'])) {
+            $termek = $_POST['termek'];
+            $mennyiseg = $_POST['mennyiseg'];
+            $kosar_tomb = file("kosar.txt", FILE_IGNORE_NEW_LINES);
+            $uj_tartalom = "";
+            if ($mennyiseg == 0) {
+                foreach ($kosar_tomb as $sor) {
+                    if (strpos($sor, $termek) !== 0) {
+                        $uj_tartalom .= $sor . "\n";
+                    }
+                }
+                file_put_contents("kosar.txt", $uj_tartalom);
             } else {
-                navbar.classList.remove('sticky');
+                foreach ($kosar_tomb as $sor) {
+                    if (strpos($sor, $termek) !== 0) {
+                        $uj_tartalom .= $sor . "\n";
+                    } else {
+                        $uj_tartalom .= $termek . ";" . $mennyiseg . "\n";
+                    }
+                }
+                file_put_contents("kosar.txt", $uj_tartalom);
             }
-        });
-    </script>
+        }
+
+        echo "<div class='cart'>";
+        $kosar_tartalom = file("kosar.txt", FILE_IGNORE_NEW_LINES);
+        $total = 0;
+
+        echo "<table class='cart_table'>";
+        echo "<tr><th>Termék név</th><th>Ár</th><th>Mennyiség / Módosítás</th></tr>";
+
+        foreach ($kosar_tartalom as $termek) {
+            $adatok = explode(";", $termek);
+            $nev = $adatok[0];
+            $ar = $adatok[1];
+            $mennyiseg = $adatok[2];
+            $total += $ar * $mennyiseg;
+
+            echo "<tr><td>" . $nev . "</td><td>" . $ar . " FT</td>";
+            echo "<td><form method='post'>";
+            echo "<input type='hidden' name='termek' value='" . $nev . ";" . $ar . "'/>";
+            echo "<input type='number' name='mennyiseg' min='0' value='" . $mennyiseg . "'/>";
+            echo "<input type='submit' value='Módosítása'/>";
+            echo "</form></td></tr>";
+        }
+
+        echo "</table>";
+        echo "<p class='osszeg'>Összesen:" . $total . " Ft </p>";
+        echo "</div>";
+
+        echo "<script>";
+        echo    "let navbar = document.getElementById('navbar');";
+        echo    "let navPos = navbar.offsetTop;";
+        echo    "window.addEventListener('scroll', e => {";
+        echo        "let scrollPos = window.scrollY;";
+        echo        "if (scrollPos > navPos) {";
+        echo            "navbar.classList.add('sticky');";
+        echo        "} else {";
+        echo            "navbar.classList.remove('sticky');";
+        echo        "}";
+        echo    "});";
+        echo "</script>";
+
+
+    } else {
+        echo "<div class='cart_not_logged_in'>";
+        echo    "<h1>Nem vagy bejelentkezve.</h1>";
+        echo    "<h2>Kattints az alábbi linkre a bejelentkezéshez, hogy megtudd mik várnak rád a kosaradban.</h2>";
+        echo    "<form action='login.php' method='get'>";
+        echo        "<input type='submit' name='cart_login_page' value='Bejelentkezés'>";
+        echo    "</form>";
+        echo "</div>";
+
+        echo "<script>";
+        echo    "let navbar = document.getElementById('navbar');";
+        echo    "let navPos = navbar.offsetTop;";
+        echo    "window.addEventListener('scroll', e => {";
+        echo        "let scrollPos = window.scrollY;";
+        echo        "if (scrollPos > navPos) {";
+        echo            "navbar.classList.add('sticky');";
+        echo        "} else {";
+        echo            "navbar.classList.remove('sticky');";
+        echo        "}";
+        echo    "});";
+        echo "</script>";
+    }
+
+?>
+
+
+
 
 
 <?php require_once("./php/footer.php")?>
