@@ -53,11 +53,11 @@ if ($directory === './') {
     <meta charset="UTF-8">
     <link rel="icon" href="<?php echo $folder;?>/media/image/sloth_logo_white.png" type="image/png">
     <link rel="stylesheet" href="<?php echo $folder;?>/css/style.css">
-    <link rel="stylesheet" href="<?php echo $folder;?>/css/Header.css">
-    <link rel="stylesheet" href="<?php echo $folder;?>/css/Footer.css">
-    <link rel="stylesheet" href="<?php echo $folder;?>/css/Responsiv.css">
-    <link rel="stylesheet" href="<?php echo $folder;?>/css/Print.css">
-    <link rel="stylesheet" href="<?php echo $folder;?>/css/Cart.css">
+    <link rel="stylesheet" href="<?php echo $folder;?>/css/header.css">
+    <link rel="stylesheet" href="<?php echo $folder;?>/css/footer.css">
+    <link rel="stylesheet" href="<?php echo $folder;?>/css/responsiv.css">
+    <link rel="stylesheet" href="<?php echo $folder;?>/css/print.css">
+    <link rel="stylesheet" href="<?php echo $folder;?>/css/cart.css">
 </head>
 
 <body>

@@ -1,0 +1,115 @@
+
+#Title {
+    width: 100%;
+}
+
+.Title {
+    background-color: #aaaaaa;
+    z-index: 100;
+}
+
+.nav_links a {
+    margin: 0vw 0.2vw;
+    padding: 0.3vw 0.5vw;
+    font-weight: 500;
+    font-size: 1.2vw;
+    color: #efefef;
+    text-decoration: none;
+}
+
+.logo {
+    height: 3vw;
+    width: 4.3vw;
+    cursor: pointer;
+}
+
+.logo.active {
+    background-color: #dedede;
+    border-radius: 4vw;
+}
+.logo:hover {
+    transition: all 0.3s ease-in;
+    background-color: #8e8e8e;
+}
+
+header {
+    height: 3vw;
+    padding: 0 10vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #aaaaaa;
+    z-index: 100;
+}
+
+ul {
+    align-items: center;
+    padding-inline-start: 0vw;
+}
+
+nav {
+    float: right;
+    padding: 1vw;
+}
+
+header a img{
+    height: 2vw;
+    width: 2vw;
+    padding: 0.2vw;
+    margin-left: 1vw;
+    border-radius: 4vw;
+}
+
+.nav_links{
+    margin: 0;
+    list-style: none;
+    height: 0.6vw;
+}
+
+.nav_links li{
+    display: inline;
+    border: none;
+}
+
+.nav_links li a:hover {
+    color: #0088a9;
+    border: 0.3vw solid #8e8e8e;
+    border-radius: 4vw;
+}
+
+#navbar.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.nav_links li a.active {
+    background-color: #dedede;
+    color: black !important;
+    border: 0.3vw solid #dedede;
+    border-radius: 4vw;
+}
+
+.loginimg.active {
+    background-color: #dedede;
+}
+
+.kosar.active {
+    background-color: #dedede;
+}
+
+.loginimg:hover {
+    transition: all 0.3s ease-in;
+    height: 2vw;
+    width: 2vw;
+    padding: 0.3vw;
+    background-color: #8e8e8e;
+}
+
+.kosar:hover {
+    transition: all 0.3s ease-in;
+    height: 2vw;
+    width: 2vw;
+    padding: 0.3vw;
+    background-color: #8e8e8e;
+}

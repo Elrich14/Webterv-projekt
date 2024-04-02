@@ -1,0 +1,155 @@
+
+.lab>ul {
+    list-style-type: none;
+}
+
+.footertext {
+    margin-top: 5vw;
+    width: 100%;
+    padding: 3vw 8vw;
+    background: #333;
+    color: #efefef;
+    display: flex;
+}
+
+.footertext div {
+    text-align: center;
+}
+
+.col-2 {
+    flex-grow: 2;
+}
+
+.col-2 form input::placeholder {
+    font-size: 1vw;
+}
+
+.footertext div h2 {
+    font-weight: 300;
+    margin-bottom: 2vw;
+    letter-spacing: 0.2vw;
+    font-size: 1.6vw;
+}
+
+.col-1 a {
+    display: block;
+    text-decoration: none;
+    color: #efefef;
+    margin-bottom: 0.7vw;
+    border: 0.3vw solid #333;
+    border-radius: 4vw;
+    font-size: 1vw;
+}
+
+.col-1 a:hover {
+    transition: all 0.3s ease-in;
+    color: #0088a9;
+    background-color: #333;
+    border: 0.3vw solid #8e8e8e;
+    border-radius: 4vw;
+}
+
+.col-1>.active {
+    background-color: #555;
+}
+
+footer form input {
+    width: 25vw;
+    height: 3vw;
+    border-radius: 4vw;
+    text-align: center;
+    margin-top: 1.5vw;
+    margin-bottom: 2.5vw;
+    outline: none;
+    border: none;
+}
+
+footer form button {
+    background: transparent;
+    border: 0.3vw solid #fff;
+    color: #fff;
+    border-radius: 2vw;
+    padding: 0.6vw 2vw;
+    font-size: 1vw;
+}
+
+footer form button:hover {
+    transition: all 0.3s ease-in;
+    color: #0088a9;
+    border: 0.3vw solid #8e8e8e;
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: row;
+    margin: 1vw 2vw;
+}
+
+.col-3 {
+    font-size: 1vw;
+}
+
+.social-icons img {
+    height: 1.2vw;
+    width: 1.2vw;
+    margin: 0.3vw;
+    cursor: pointer;
+}
+.social-icons img:hover {
+    height: 1.5vw;
+    width: 1.5vw;
+    margin: 0.15vw;
+    cursor: pointer;
+}
+
+#footerline {
+    margin: 0;
+    padding: 0.2vw 1vw;
+    background-color: #666;
+    font-size: 0.7vw;
+}
+
+.copyright {
+    text-align: left;
+    color: white;
+    margin: 0.2vw;
+}
+
+.terms {
+    float: right;
+    color: white;
+    padding: 0vw 0.5vw;
+    border: 0.2vw solid #666;
+    border-radius: 2vw;
+}
+
+.terms.active {
+    background-color: #555;
+}
+
+.terms:hover {
+    transition: all 0.3s ease-in;
+    color: #0088a9;
+    border: 0.2vw solid #8e8e8e;
+    border-radius: 2vw;
+}
+
+.policy {
+    float: right;
+    color: white;
+    margin-right: 1vw;
+    border: 0.2vw solid #666;
+    border-radius: 2vw;
+    padding: 0vw 0.5vw;
+}
+
+.policy.active {
+    background-color: #555;
+}
+
+.policy:hover {
+    transition: all 0.3s ease-in;
+    color: #0088a9;
+    border: 0.2vw solid #8e8e8e;
+    border-radius: 2vw;
+}

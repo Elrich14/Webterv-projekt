@@ -1,0 +1,82 @@
+.cart {
+    font-size: 1vw;
+    margin: 2vw 0 0 10vw;
+}
+
+.cart th{
+    font-size: 1.3vw;
+    padding: 1vw;
+}
+
+.cart [type='number']{
+    text-align: center;
+    margin: 0 1vw;
+    padding: 0;
+    width: 5vw;
+    height: 2vw;
+    border-radius: 2vw;
+}
+
+.cart [type='submit']{
+    border-radius: 2vw;
+    padding: 0.3vw 1vw;
+    border: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.cart [type='submit']:hover{
+    font-size: 1.1vw;
+    border-radius: 2vw;
+    padding: 0.25vw 0.75vw;
+    border: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/*nyilak eltüntetése böngészökben*/
+.cart input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.osszeg {
+    margin-left: 23vw;
+    font-size: 1.5vw;
+}
+
+.cart_not_logged_in {
+    margin:5vw auto 15vw auto;
+    text-align: center;
+}
+
+.cart_not_logged_in h1 {
+    font-size: 2vw;
+    margin:0 auto 2vw auto;
+    text-align: center;
+}
+
+.cart_not_logged_in h2 {
+    font-size: 1.5vw;
+    margin:0 auto 2vw auto;
+    text-align: center;
+}
+
+.cart_not_logged_in input {
+    width: 25vw;
+    height: 3vw;
+    border-radius: 4vw;
+    text-align: center;
+    margin-top: 1.5vw;
+    margin-bottom: 2.5vw;
+    outline: none;
+    border: none;
+}
+
+.cart_not_logged_in input:hover {
+    transition: all 0.3s ease-in;
+    color: #0088a9;
+    border: 0.3vw solid #8e8e8e;
+}
