@@ -1,46 +1,7 @@
-<!DOCTYPE html>
-
-<html lang="hu">
-
-<head>
-    <title>Birkl&amp;Zentai WebShop</title>
-    <meta charset="UTF-8">
-    <link rel="icon" href="./media/image/sloth_logo_white.png" type="image/icon">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-
-<body>
-    <div class="Title">
-        <img id="Title" src="./media/image/Title.webp" alt="Birkl & Zentai saját márka.">
-        <header id="navbar">
-            <div>
-                <a href="index.html"><img class="logo active" src="./media/image/logo_without_bg.webp" alt="logo"></a>
-                <nav>
-                    <ul class="nav_links">
-                        <li><a href="designer.html">Dizájnerek</a></li>
-                        <li><a href="ruhak.html">Ruhák</a></li>
-                        <li><a href="meret.html">Méret táblázat</a></li> <!-- Itt lehet táblázat meg stb. leírások -->
-                        <li><a href="kapcsolat.html">Kapcsolat</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="profil">
-                <a href="profil/login.html"><img class="login" src="./media/image/user.webp" alt="belépés"></a>
-                <!-- ikon jobb oldalon -->
-                <a href="kosar.html"><img class="kosar" src="./media/image/shopping-cart.webp" alt="kosár"></a>
-                <!-- ikon jobb oldalon -->
-            </div>
-            <!--
-            <?php if (isset($_SESSION["user"])) { ?>
-            <a href="./profil/profil.html">Profilom</a>
-            <a href="./profil/logout.html">Kijelentkezés</a>
-            <?php } else { ?>
-            <a href="./profil/login.html">Bejelentkezés</a>
-            <a href="./profil/signup.html">Regisztráció</a>
-            <?php } ?>
-            -->
-        </header>
-    </div>
+<?php require_once("./php/head.php");
+session_start();
+include "Common.php";
+?>
 
     <div class="slideshow-container">
         <div class="mySlides fade">
@@ -163,49 +124,5 @@
             setTimeout(showSlides, 2000);
         }
     </script>
-    <footer>
-        <div class="footertext">
-            <div class="col-1">
-                <h2>Rólunk &amp; Információk</h2> <!-- App hamarosan, Size guide -->
-                <a href="./egyeb/rolunk.html">Rólunk</a>
-                <a href="./egyeb/szallitas.html">Szállítás</a>
-                <a href="./egyeb/diakkedvezmeny.html">Diákkedvezmény</a>
-                <a href="./egyeb/promokod.html">Promo kódok</a>
-                <a href="./egyeb/visszakuldes.html">Csomag visszaküldés</a>
-                <a href="./egyeb/csomagell.html">Rendelés ellenőrzése</a>
-                <a href="./egyeb/ajandekkartya.html">Ajándékkártya</a>
-            </div>
 
-            <div class="col-2">
-                <h2>Feliratkozás</h2> <!-- jobb oldalon textarea plusz gomb -->
-                <form>
-                    <input type="email" placeholder="valami@gmail.com" required>
-                    <br>
-                    <button type="submit">FELIRATKOZÁS</button>
-                </form>
-            </div>
-
-            <div class="col-3">
-                <h2>Hívj minket!</h2> <!-- jobb oldalon telefonszám -->
-                <p>6724, Kossuth Lajos sgrt. 74 <br>Szeged, Magyarország </p>
-                <p>06/20-111-1111</p>
-                <div class="social-icons">
-                    <a href="https://facebook.com/"><img src="./media/image/facebook.webp" alt="facebook"></a>
-                    <a href="https://instagram.com/"><img src="./media/image/instagram.webp" alt="instagram"></a>
-                    <a href="https://linkedin.com/"><img src="./media/image/linkedin.webp" alt="linkedin"></a>
-                    <a href="https://whatsapp.com/"><img src="./media/image/whatsapp.webp" alt="whatsapp"></a>
-                    <a href="https://wordpress.com/"><img src="./media/image/wordpress.webp" alt="wordpress"></a>
-                </div>
-            </div>
-
-        </div>
-
-        <div id="footerline"> <!-- also sor -->
-            <p class="copyright"><a href="./egyeb/terms.html"><span class="terms">Terms &amp; Conditions</span></a><a
-                    href="./egyeb/policy.html"><span class="policy">Privacy Policy</span></a>COPYRIGHT &copy; 2024
-                Birkl&amp;Zentai</p>
-        </div>
-
-    </footer>
-</body>
-</html>
+<?php require_once("./php/footer.php")?>

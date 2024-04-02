@@ -1,0 +1,1 @@
+a:5:{s:8:"username";s:9:"asdasd123";s:12:"signup_email";s:13:"asd@gmail.com";s:8:"password";s:6:"asd123";s:13:"date_of_birth";s:10:"2023-04-06";s:3:"sex";s:1:"E";}
