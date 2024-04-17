@@ -42,7 +42,7 @@ body {
     cursor: pointer;
 }
 
-.logo.active {
+.active {
     background-color: #dedede;
     border-radius: 50px;
 }
@@ -115,15 +115,8 @@ header a img {
     border-radius: 20px;
 }
 
-.login.active {
-    background-color: #dedede;
-}
 
-.kosar.active {
-    background-color: #dedede;
-}
-
-.login:hover {
+.loginimg:hover {
     transition: all 0.3s ease-in;
     height: 40px;
     width: 40px;
@@ -356,55 +349,6 @@ section iframe {
 
 /* Index */
 
-/*-----SIGNUP-----*/
-
-.signup form {
-    width: 100%;
-    position: initial;
-}
-
-.signup form fieldset {
-    width: 30vw;
-    margin: 3vw auto auto auto;
-
-}
-
-.signup form fieldset label {
-    text-align: center;
-    font-size: 1vw;
-}
-
-.signup form fieldset input {
-    position: initial;
-    font-size: 1vw;
-    text-align: center;
-    margin: 15px 35px;
-
-    width: 25vw;
-    height: 3vw;
-    border-radius: 4vw;
-    outline: none;
-    border: none;
-}
-
-#F,
-#N,
-#E {
-    width: 1.1vw;
-    height: 1.1vw;
-    margin: 0 1vw 0 0.3vw;
-    text-align: center;
-}
-
-#signup_reset:hover,
-#signup_submit:hover {
-    transition: all 0.3s ease-in;
-    color: #0088a9;
-    border: 0.3vw solid #8e8e8e;
-}
-
-/*------SIGNUP-------*/
-
 /*------Profil--------*/
 
 .profil input {
@@ -461,165 +405,6 @@ input[type="submit"]:hover {
 }
 
 /*------Profil--------*/
-
-
-/*
-    --------------------footer--------------------
-*/
-
-.lab>ul {
-    list-style-type: none;
-}
-
-.footertext {
-    margin-top: 50px;
-    width: 100%;
-    padding: 50px 10%;
-    background: #333;
-    color: #efefef;
-    display: flex;
-}
-
-.footertext div {
-    text-align: center;
-}
-
-.col-2 {
-    flex-grow: 2;
-}
-
-.footertext div h2 {
-    font-weight: 300;
-    margin-bottom: 30px;
-    letter-spacing: 1px;
-}
-
-.col-1 a {
-    display: block;
-    text-decoration: none;
-    color: #efefef;
-    margin-bottom: 10px;
-    border: 4px solid #333;
-    border-radius: 20px;
-}
-
-.col-1 a:hover {
-    transition: all 0.3s ease-in;
-    color: #0088a9;
-    background-color: #333;
-    border: 4px solid #8e8e8e;
-    border-radius: 20px;
-}
-
-.col-1>.active {
-    background-color: #555;
-}
-
-form input {
-    width: 400px;
-    height: 45px;
-    border-radius: 4px;
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 40px;
-    outline: none;
-    border: none;
-}
-
-form button {
-    background: transparent;
-    border: 4px solid #fff;
-    color: #fff;
-    border-radius: 30px;
-    padding: 10px 30px;
-    font-size: 15px;
-}
-
-form button:hover {
-    transition: all 0.3s ease-in;
-    color: #0088a9;
-    border: 4px solid #8e8e8e;
-}
-
-.social-icons {
-    display: flex;
-    flex-direction: row;
-    margin: 10px 40px;
-}
-
-.social-icons img {
-    height: 20px;
-    width: 20px;
-    margin: 5px;
-    cursor: pointer;
-}
-
-.social-icons img:hover {
-    height: 28px;
-    width: 28px;
-    margin: 1px;
-    cursor: pointer;
-}
-
-#footerline {
-    margin: 0;
-    padding: 1px 10px;
-    background-color: #666;
-    font-size: 10px;
-}
-
-.copyright {
-    text-align: left;
-    color: white;
-    margin: 2px;
-}
-
-.terms {
-    float: right;
-    color: white;
-    padding: 0px 5px;
-    border: 1px solid #666;
-    border-radius: 20px;
-}
-
-.terms.active {
-    background-color: #555;
-}
-
-.terms:hover {
-    transition: all 0.3s ease-in;
-    color: #0088a9;
-    border: 1px solid #8e8e8e;
-    border-radius: 20px;
-}
-
-.policy {
-    float: right;
-    color: white;
-    padding: 0px 5px;
-    margin-right: 20px;
-    border: 1px solid #666;
-    border-radius: 20px;
-}
-
-.policy.active {
-    background-color: #555;
-}
-
-.policy:hover {
-    transition: all 0.3s ease-in;
-    color: #0088a9;
-    border: 1px solid #8e8e8e;
-    border-radius: 20px;
-}
-
-@media screen and (max-width: 600px) {
-
-    .column.shortside,
-    .column.longside {
-        width: 100%;
-    }
-}
 
 /*------Ruhák--------*/
 
@@ -768,7 +553,47 @@ h2 {
     margin-left: 440px;
 }
 
+/*-----LOGIN-----*/
+.login form {
+    width: 100%;
+    position: initial;
+}
+
+.login form fieldset{
+    width: 500px;
+    margin: 50px auto auto auto;
+}
+
+.login form fieldset label{
+    text-align: center;
+    font-size: 1vw;
+}
+.login form fieldset input{
+    position: center;
+    font-size: 1vw;
+    text-align: center;
+    margin: 15px 35px;
+
+    width: 25vw;
+    height: 3vw;
+    border-radius: 4vw;
+    outline: none;
+    border: none;
+}
+
+#login_reset:hover, #login_submit:hover{
+    transition: all 0.3s ease-in;
+    color: #0088a9;
+    border: 4px solid #8e8e8e;
+}
+/*------LOGIN-------*/
+
 /*----signup----*/
+.signup form {
+    width: 100%;
+    position: initial;
+}
+
 .signup form fieldset {
     width: 500px;
     margin: 50px auto auto auto;
@@ -785,27 +610,19 @@ h2 {
     margin: 15px 35px;
 }
 
-#option1,
-#option2,
-#option3 {
+#F, #N, #E{
     width: 10px;
     height: 10px;
+    margin: 0 1vw 0 0.3vw;
     text-align: center;
 }
 
-.signup form input {
-    margin: auto;
-    position: initial;
-    border: solid 1px black;
-    text-align: center;
-}
-
-#signup_reset:hover,
-#signup_submit:hover {
+#signup_reset:hover,#signup_submit:hover {
     transition: all 0.3s ease-in;
     color: #0088a9;
     border: 4px solid #8e8e8e;
 }
+/*----signup----*/
 
 /* reszponzivitas */
 

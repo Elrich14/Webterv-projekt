@@ -1,12 +1,15 @@
+/*
+    --------------------footer--------------------
+*/
 
 .lab>ul {
     list-style-type: none;
 }
 
 .footertext {
-    margin-top: 5vw;
+    margin-top: 50px;
     width: 100%;
-    padding: 3vw 8vw;
+    padding: 50px 10%;
     background: #333;
     color: #efefef;
     display: flex;
@@ -20,107 +23,98 @@
     flex-grow: 2;
 }
 
-.col-2 form input::placeholder {
-    font-size: 1vw;
-}
-
 .footertext div h2 {
     font-weight: 300;
-    margin-bottom: 2vw;
-    letter-spacing: 0.2vw;
-    font-size: 1.6vw;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
 }
 
 .col-1 a {
     display: block;
     text-decoration: none;
     color: #efefef;
-    margin-bottom: 0.7vw;
-    border: 0.3vw solid #333;
-    border-radius: 4vw;
-    font-size: 1vw;
+    margin-bottom: 10px;
+    border: 4px solid #333;
+    border-radius: 20px;
 }
 
 .col-1 a:hover {
     transition: all 0.3s ease-in;
     color: #0088a9;
     background-color: #333;
-    border: 0.3vw solid #8e8e8e;
-    border-radius: 4vw;
+    border: 4px solid #8e8e8e;
+    border-radius: 20px;
 }
 
 .col-1>.active {
     background-color: #555;
 }
 
-footer form input {
-    width: 25vw;
-    height: 3vw;
-    border-radius: 4vw;
+form input {
+    width: 400px;
+    height: 45px;
+    border-radius: 4px;
     text-align: center;
-    margin-top: 1.5vw;
-    margin-bottom: 2.5vw;
+    margin-top: 20px;
+    margin-bottom: 40px;
     outline: none;
     border: none;
 }
 
-footer form button {
+form button {
     background: transparent;
-    border: 0.3vw solid #fff;
+    border: 4px solid #fff;
     color: #fff;
-    border-radius: 2vw;
-    padding: 0.6vw 2vw;
-    font-size: 1vw;
+    border-radius: 30px;
+    padding: 10px 30px;
+    font-size: 15px;
 }
 
-footer form button:hover {
+form button:hover {
     transition: all 0.3s ease-in;
     color: #0088a9;
-    border: 0.3vw solid #8e8e8e;
+    border: 4px solid #8e8e8e;
 }
 
 .social-icons {
     display: flex;
     flex-direction: row;
-    margin: 1vw 2vw;
-}
-
-.col-3 {
-    font-size: 1vw;
+    margin: 10px 40px;
 }
 
 .social-icons img {
-    height: 1.2vw;
-    width: 1.2vw;
-    margin: 0.3vw;
+    height: 20px;
+    width: 20px;
+    margin: 5px;
     cursor: pointer;
 }
+
 .social-icons img:hover {
-    height: 1.5vw;
-    width: 1.5vw;
-    margin: 0.15vw;
+    height: 28px;
+    width: 28px;
+    margin: 1px;
     cursor: pointer;
 }
 
 #footerline {
     margin: 0;
-    padding: 0.2vw 1vw;
+    padding: 1px 10px;
     background-color: #666;
-    font-size: 0.7vw;
+    font-size: 10px;
 }
 
 .copyright {
     text-align: left;
     color: white;
-    margin: 0.2vw;
+    margin: 2px;
 }
 
 .terms {
     float: right;
     color: white;
-    padding: 0vw 0.5vw;
-    border: 0.2vw solid #666;
-    border-radius: 2vw;
+    padding: 0px 5px;
+    border: 1px solid #666;
+    border-radius: 20px;
 }
 
 .terms.active {
@@ -130,17 +124,17 @@ footer form button:hover {
 .terms:hover {
     transition: all 0.3s ease-in;
     color: #0088a9;
-    border: 0.2vw solid #8e8e8e;
-    border-radius: 2vw;
+    border: 1px solid #8e8e8e;
+    border-radius: 20px;
 }
 
 .policy {
     float: right;
     color: white;
-    margin-right: 1vw;
-    border: 0.2vw solid #666;
-    border-radius: 2vw;
-    padding: 0vw 0.5vw;
+    padding: 0px 5px;
+    margin-right: 20px;
+    border: 1px solid #666;
+    border-radius: 20px;
 }
 
 .policy.active {
@@ -150,6 +144,14 @@ footer form button:hover {
 .policy:hover {
     transition: all 0.3s ease-in;
     color: #0088a9;
-    border: 0.2vw solid #8e8e8e;
-    border-radius: 2vw;
+    border: 1px solid #8e8e8e;
+    border-radius: 20px;
+}
+
+@media screen and (max-width: 600px) {
+
+    .column.shortside,
+    .column.longside {
+        width: 100%;
+    }
 }
