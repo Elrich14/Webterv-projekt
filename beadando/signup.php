@@ -48,7 +48,7 @@ if (isset($_SESSION["user"]) && !empty($_SESSION["user"])) {
     </div>
 <?php
     $errors = [];
-    $accounts = loadUsers("Felhasznalok.txt");
+    $accounts = loadUsers("users.txt");
 
 if (!isset($_POST["username"]) || trim($_POST["username"]) === "")
     $errors[] = "<p class='reg'>A felhasználónév megadása kötelező!</p> ";
@@ -122,7 +122,7 @@ if (isset($_POST["signup_submit"])){
             "sex" => $sex
         ];
 
-        saveUser("Felhasznalok.txt", $data);
+        saveUser("users.txt", $data);
 
     } else {
         foreach ($errors as $error) {

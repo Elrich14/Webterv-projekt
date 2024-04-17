@@ -31,14 +31,13 @@ if ($directory === './') {
         <a <?php if ($page === 'kosar.php') echo 'class="active"'; ?> href="<?php echo $folder;?>/kosar.php"><img class="kosar" src="<?php echo $folder;?>/media/image/shopping-cart.webp" alt="kosár"></a>
     </div>
 
-    <!--
-        <?//php if (isset($_SESSION["user"])) { ?>
-        <a href="<?php// echo $folder;?>/profil/profil.html">Profilom</a>
-        <a href="<?php// echo $folder;?>/profil/logout.html">Kijelentkezés</a>
-        <?php// } else { ?>
-        <a href="<?php// echo $folder;?>/profil/login.html">Bejelentkezés</a>
-        <a href="<?php// echo $folder;?>/profil/signup.html">Regisztráció</a>
-        <?php// } ?>
-    -->
+    
+    <?php if (isset($_SESSION["user"])) { ?>
+    <a href="<?php echo $folder;?>/profil/profil.html">Profilom</a>
+    <a href="<?php echo $folder;?>/profil/logout.html">Kijelentkezés</a>
+    <?php } else { ?>
+    <a href="<?php echo $folder;?>/profil/login.html">Bejelentkezés</a>
+    <a href="<?php echo $folder;?>/profil/signup.html">Regisztráció</a>
+    <?php } ?>
 
 </header>

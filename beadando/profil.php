@@ -17,7 +17,7 @@ if (isset($_SESSION["user"]) && empty($_SESSION["user"])) {
 
         <h2>A felhasználó adatai:</h2>
         <?php
-        $accounts = loadUsers("Felhasznalok.txt");
+        $accounts = loadUsers("users.txt");
 
         echo "<ul>";
         echo "<li><b>Felhasználónév: </b>" . $_SESSION["user"]["username"] . "</li>";
@@ -40,11 +40,11 @@ if (isset($_SESSION["user"]) && empty($_SESSION["user"])) {
 
             <?php
 
-            $accounts = loadUsers("Felhasznalok.txt");
+            $accounts = loadUsers("users.txt");
             $errors = [];
 
             if (isset($_POST["delete"])) {
-                deleteUser("Felhasznalok.txt", $_SESSION["user"]["signup_email"]);
+                deleteUser("users.txt", $_SESSION["user"]["signup_email"]);
                 session_destroy();
                 header("Location: login.php");
                 exit;
