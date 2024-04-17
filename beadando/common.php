@@ -1,26 +1,19 @@
 <?php
 
-function loadUsers($filenev) {
-    $users = [];
-
-    $file = fopen($filenev, "r");
-
-    while (($line = fgets($file)) !== false) {
-        $users[] = unserialize($line);
-    }
-
-    fclose($file);
-
+function loadUsers($file) {
+    $file = file_get_contents($file);
+    $users = json_decode($file, true);
     return $users;
 }
 
-function saveUser($filenev, $user) {
-    $file = fopen($filenev, "a");
-
-    fwrite($file, serialize($user) . "\n");
-
+function saveUser($file, $data) {
+    $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT); // hash the password before saving
+    $file = fopen($file, "a");
+    fwrite($file, json_encode($data). "\n");
     fclose($file);
 }
+
+
 
 function deleteUser($filenev, $kit) {
     $accounts = loadUsers("users.txt");
