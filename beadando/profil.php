@@ -3,7 +3,7 @@ require_once("./php/head.php");
 include "Common.php";
 
 session_start();
-if (isset($_SESSION["user"]) && empty($_SESSION["user"])) {
+if (!isset($_SESSION["user"]) || empty($_SESSION["user"])) {
     header("Location: login.php");
     exit;
 }
@@ -20,9 +20,13 @@ if (isset($_SESSION["user"]) && empty($_SESSION["user"])) {
         $accounts = loadUsers("users.txt");
 
         echo "<ul>";
-        echo "<li><b>Felhasználónév: </b>" . $_SESSION["user"]["username"] . "</li>";
-        echo "<li><b>E-mail: </b>" . $_SESSION["user"]["signup_email"] . "</li>";
-        echo "<li><b>Jelszó: </b>" . $_SESSION["user"]["password"] . "</li>";
+            if (isset($_SESSION["user"]) && isset($_SESSION["user"]["username"]) && isset($_SESSION["user"]["signup_email"]) && isset($_SESSION["user"]["password"])) {
+                 echo "<li><b>Felhasználónév: </b>". $_SESSION["user"]["username"]. "</li>";
+                 echo "<li><b>E-mail: </b>". $_SESSION["user"]["signup_email"]. "</li>";
+                 echo "<li><b>Jelszó: </b>". $_SESSION["user"]["password"]. "</li>";
+            } else {
+                echo "<li><b>No user data available.</b></li>";
+            }
         echo "</ul>";
 
         ?>

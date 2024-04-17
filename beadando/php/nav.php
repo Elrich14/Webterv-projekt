@@ -33,11 +33,11 @@ if ($directory === './') {
 
     
     <?php if (isset($_SESSION["user"])) { ?>
-    <a href="<?php echo $folder;?>/profil/profil.html">Profilom</a>
-    <a href="<?php echo $folder;?>/profil/logout.html">Kijelentkezés</a>
+    <a href="<?php echo $folder;?>/profil.php">Profilom</a>
+    <a href="<?php echo $folder;?>/logout.php">Kijelentkezés</a>
     <?php } else { ?>
-    <a href="<?php echo $folder;?>/profil/login.html">Bejelentkezés</a>
-    <a href="<?php echo $folder;?>/profil/signup.html">Regisztráció</a>
+    <a href="<?php echo $folder;?>/login.php">Bejelentkezés</a>
+    <a href="<?php echo $folder;?>/signup.php">Regisztráció</a>
     <?php } ?>
 
 </header>
