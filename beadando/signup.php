@@ -41,17 +41,17 @@ if (isset($_POST["signup_submit"])) {
     $date_of_birth = $_POST["date_of_birth"];
     $sex = isset($_POST["sex"]) ? $_POST["sex"] : "";
 
-  
-
-    foreach ($accounts["users"] as $account) {
-        if ($account["username"] === $username) {
-            $errors[] = "<p class='reg'>Ez a felhasználónév már foglalt!</p>";
+    if(!empty($accounts)) {
+        foreach ($accounts["users"] as $account) {
+            if ($account["username"] === $username) {
+                $errors[] = "<p class='reg'>Ez a felhasználónév már foglalt!</p>";
+            }
         }
-    }
-        
-    foreach ($accounts["users"] as $account) {
-        if ($account["signup_email"] === $signup_email) {
-            $errors[] = "<p class='reg'>Ezzel az e-mail címmel már regisztráltak!</p> ";
+            
+        foreach ($accounts["users"] as $account) {
+            if ($account["signup_email"] === $signup_email) {
+                $errors[] = "<p class='reg'>Ezzel az e-mail címmel már regisztráltak!</p> ";
+            }
         }
     }
 

@@ -7,7 +7,7 @@
         header("Location: profil.php");
         exit;
     }
-
+    
     $successful_login = false;
     $err = "";
     $accounts = loadUsers("users.txt");

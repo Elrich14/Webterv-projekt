@@ -1,5 +1,5 @@
 <?php
-    function loadUsers($file):array {
+    function loadUsers($file) {
         if (!file_exists($file))
             die("Nem sikerült a fájl megnyitása!");
 
@@ -37,20 +37,22 @@
         $kit=NULL;
         $data=NULL;
 
-        foreach ($accounts["users"] as $account) {
-            if ($username == $account["username"]) {
-                $data = [
-                    "username" => $account["username"],
-                    "signup_email" => $account["signup_email"],
-                    "password" => $newpsw,
-                    "date_of_birth" => $account["date_of_birth"],
-                    "sex" => $account["sex"]
-                ];
-                $kit = $account["signup_email"];
-                $newpsw_successful = true;
-                break;
-            }
-        }  
+        if (!is_null($accounts)) {
+            foreach($accounts["users"] as $account) {
+                if ($username == $account["username"]) {
+                    $data = [
+                        "username" => $account["username"],
+                        "signup_email" => $account["signup_email"],
+                        "password" => $newpsw,
+                        "date_of_birth" => $account["date_of_birth"],
+                        "sex" => $account["sex"]
+                    ];
+                    $kit = $account["signup_email"];
+                    $newpsw_successful = true;
+                    break;
+                }
+            }  
+        }
 
         echo $newpsw_successful;
 
