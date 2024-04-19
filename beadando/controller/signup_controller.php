@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include "Common.php";
+    include "functions.php";
 
     $errors = [];
     $accounts = loadUsers();
@@ -72,7 +72,7 @@
             ];
 
             saveUser($data);
-            header("Location: login.php");
+            header("Location: ../login.php");
         } else {
             foreach ($errors as $error) {
                 echo $error;

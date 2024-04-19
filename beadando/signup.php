@@ -11,7 +11,7 @@
 <div id="content">
 
     <div class="signup">
-        <form action="signup_controller.php" method="POST">
+        <form action="controller/signup_controller.php" method="POST">
             <fieldset>
                 <legend>Regisztráció</legend>
                 <label for="username">Felhasználónév:</label> <br>

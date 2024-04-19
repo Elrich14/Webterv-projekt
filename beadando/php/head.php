@@ -1,6 +1,5 @@
 <?php
     session_start();
-    include_once "Common.php";
     $url = $_SERVER['REQUEST_URI'];
     $parts = explode('/', $url);
     $page = end($parts);
@@ -34,15 +33,17 @@
             $title = "Birkl&amp;Zentai WebShop";
             break;
     }
-?>
-<?php
-$file_path = __FILE__;
-$directory = dirname($file_path);
-if ($directory === './') {
-    $folder = "..";
-} else {
-    $folder = ".";
-}
+
+    $file_path = __FILE__;
+    $directory = dirname($file_path);
+    if ($directory === './') {
+        $folder = "..";
+    } else {
+        $folder = ".";
+    }
+
+    $mappa = $folder."/controller/functions.php";
+    include_once($mappa);
 ?>
 
 <!DOCTYPE html>

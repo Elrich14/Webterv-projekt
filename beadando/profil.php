@@ -15,7 +15,7 @@
             <li><b>Birthdate: </b><?php echo $_SESSION["user"]["date_of_birth"]?></li>
             </ul>
 
-        <form action="profil_controller.php" method="POST" id="password_change" enctype="multipart/form-data">
+        <form action="controller/profil_controller.php" method="POST" id="password_change" enctype="multipart/form-data">
             <fieldset>
                 <legend>Jelszóváltás:</legend><br>
                 
@@ -33,11 +33,11 @@
         </form>
 
         <div class="top">
-            <form action="profil_controller.php" method="POST" id="logout">
+            <form action="controller/profil_controller.php" method="POST" id="logout">
                 <input type="submit" name="logout" id="logout" value="Kijelentkezés">
             </form>
 
-            <form action="profil_controller.php" method="POST" id="del">
+            <form action="controller/profil_controller.php" method="POST" id="del">
                 <label for="delete"><b>Fiók törlése:</b></label><br>
                 <input type="submit" name="delete" id="delete" value="Fiok törlése">
             </form>

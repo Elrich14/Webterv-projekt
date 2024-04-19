@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include "Common.php";
+    include "functions.php";
 
     $successful_login = false;
     $err = "";
@@ -29,17 +29,17 @@
             }
         } else {
             $err = "<p class='signup'>Mindkét mező kitöltése kötelező!</p>";
-            header("Location: login.php");
+            header("Location: ../login.php");
         }
     }
 
     if ($successful_login) {
         $_SESSION["user"] = $user_data;
         $_SESSION['logged_in'] = true;
-        header("Location: profil.php");
+        header("Location: ../profil.php");
         exit;
     } else {
         echo $err;
-        header("Location: login.php");
+        header("Location: ../login.php");
     }
 ?>

@@ -8,7 +8,7 @@
 ?>
 
 <div class="login">
-    <form action="login_controller.php" method="POST">
+    <form action="controller/login_controller.php" method="POST">
         <fieldset>
             <legend>Jelentkezz be</legend>
 
