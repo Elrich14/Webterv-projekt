@@ -1,1 +1,123 @@
-a:5:{s:8:"username";s:9:"asdasd123";s:12:"signup_email";s:13:"asd@gmail.com";s:8:"password";s:6:"asd123";s:13:"date_of_birth";s:10:"2023-04-06";s:3:"sex";s:1:"E";}
+{
+    "users": [
+        {
+            "username": "test",
+            "signup_email": "test@test.hu",
+            "password": "$2y$10$OAB4by5URZ3U4wGc8v..wOQnoTjYj6jqeQnZOPRrS9y.IABkWYGOS",
+            "date_of_birth": "1111-11-11",
+            "sex": "F"
+        },
+        {
+            "username": "erik",
+            "signup_email": "erik@gmail.hu",
+            "password": "$2y$10$hslLuYW1TImjKb6Al0gT1u0LznAl7zjaL2EvSuKoo03gcf2kfbAPq",
+            "date_of_birth": "1111-11-11",
+            "sex": "N"
+        },
+        {
+            "username": "norbi",
+            "signup_email": "norbi@gmail.hu",
+            "password": "$2y$10$0lWUpxWTc5rR6dwB76.Ra.i2zvgBmA8X3TxhnTuNg2bIGOmsn.q6K",
+            "date_of_birth": "1111-11-11",
+            "sex": "F"
+        },
+        {
+            "username": "janos",
+            "signup_email": "janos@net.hu",
+            "password": "$2y$10$vg3b2tGnoQFbzjprKNZnzu9Qckr2t9wiE483YMh0Eoy8u0cEhgakC",
+            "date_of_birth": "1111-11-11",
+            "sex": "N"
+        },
+        {
+            "username": "norbi",
+            "signup_email": "norbi@gmail.hu",
+            "password": "$2y$10$gnW7tvQR1jkOFkV8NBLX4.6.Rs8xTmZk5QFppPlsevuVbcu41RuC2",
+            "date_of_birth": "1111-11-11",
+            "sex": "F"
+        },
+        {
+            "username": "norbi",
+            "signup_email": "norbi@gmail.hu",
+            "password": "$2y$10$nez6GxYNnGSvD4jzpj.7Gu9m7HmuaFx4HgDi83Rzdvd7P1Kf.7sLK",
+            "date_of_birth": "1111-11-11",
+            "sex": "F"
+        },
+        {
+            "username": "norbi",
+            "signup_email": "norbi@gmail.hu",
+            "password": "$2y$10$oHv4F9zwzKFEhu9Mx3WAQ.XFRvUxw6ogR6XH3Mx54lkGd\/p\/dmOOK",
+            "date_of_birth": "1111-11-11",
+            "sex": "F"
+        },
+        {
+            "username": "norbi",
+            "signup_email": "norbi@gmail.hu",
+            "password": "$2y$10$9IW\/R2ODF8WVB1JaAe94AOcZ5ObT.10tbvTpIlCskRBPP61FHuJrC",
+            "date_of_birth": "1111-11-11",
+            "sex": "F"
+        },
+        {
+            "username": "norbi",
+            "signup_email": "norbi@gmail.hu",
+            "password": "$2y$10$85RWPo91noujHPzUSGLhz.iHRGkOEAPB.p2u3v3jEefIybd2R2gb2",
+            "date_of_birth": "1111-11-11",
+            "sex": "F"
+        },
+        {
+            "username": "norbi",
+            "signup_email": "norbi@gmail.hu",
+            "password": "$2y$10$Ih9MaOduKzmVcB19zYwNNOJFyGBTyWEvyfsz.Y2VXqeEHObycLh2y",
+            "date_of_birth": "1111-11-11",
+            "sex": "F"
+        },
+        {
+            "username": "norbi",
+            "signup_email": "norbi@gmail.hu",
+            "password": "$2y$10$ln12IIlXRlmwGZH04U0vruXyUQgXOeL\/cl3NQBNKDXYvSP5JYjfue",
+            "date_of_birth": "1111-11-11",
+            "sex": "F"
+        },
+        {
+            "username": "norbi",
+            "signup_email": "norbi@gmail.hu",
+            "password": "$2y$10$nBuhpO5fqDZ9wFX77nBsrecvu6jLGOMUQh2pI15WjGXCR7nU4OAZ2",
+            "date_of_birth": "1111-11-11",
+            "sex": "F"
+        },
+        {
+            "username": "norbi",
+            "signup_email": "norbi@gmail.hu",
+            "password": "$2y$10$GFGkB8DP9nlq\/Il2h47RneO\/HvYoAWs5726bz8PR30PmkfWrAEJAq",
+            "date_of_birth": "1111-11-11",
+            "sex": "F"
+        },
+        {
+            "username": "norbi",
+            "signup_email": "norbi@gmail.hu",
+            "password": "$2y$10$wlyu.gfwumPA6wViJQR16O9EnlODtLhuFrzdRhnwYMe6xYeRVFyPe",
+            "date_of_birth": "1111-11-11",
+            "sex": "F"
+        },
+        {
+            "username": "norbi",
+            "signup_email": "norbi@gmail.hu",
+            "password": "$2y$10$zWWrkfy1gZAkZ7lVMq5Ta.h4\/f3NHb3OeIScB3JAJT8WWySI4A85q",
+            "date_of_birth": "1111-11-11",
+            "sex": "F"
+        },
+        {
+            "username": "norbi",
+            "signup_email": "norbi@gmail.hu",
+            "password": "$2y$10$vor51Lfa8pgQhFfG6kTdGuuAlYlWDrTTKnh5CdusFWhdC51QUDqay",
+            "date_of_birth": "1111-11-11",
+            "sex": "F"
+        },
+        {
+            "username": "norbi",
+            "signup_email": "norbi@gmail.hu",
+            "password": "$2y$10$bZ9oTLHdMO2uWCFZ\/q2zWey7GmE8DD53wMhh4JSvu\/8vxNkUx9y\/u",
+            "date_of_birth": "1111-11-11",
+            "sex": "F"
+        }
+    ]
+}

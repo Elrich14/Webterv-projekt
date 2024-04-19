@@ -7,7 +7,7 @@
         if (isset($_POST['termek']) && isset($_POST['mennyiseg'])) {
             $termek = $_POST['termek'];
             $mennyiseg = $_POST['mennyiseg'];
-            $kosar_tomb = file("kosar.txt", FILE_IGNORE_NEW_LINES);
+            $kosar_tomb = file("cart.txt", FILE_IGNORE_NEW_LINES);
             $uj_tartalom = "";
             if ($mennyiseg == 0) {
                 foreach ($kosar_tomb as $sor) {
@@ -15,7 +15,7 @@
                         $uj_tartalom .= $sor . "\n";
                     }
                 }
-                file_put_contents("kosar.txt", $uj_tartalom);
+                file_put_contents("cart.txt", $uj_tartalom);
             } else {
                 foreach ($kosar_tomb as $sor) {
                     if (strpos($sor, $termek) !== 0) {
@@ -24,12 +24,12 @@
                         $uj_tartalom .= $termek . ";" . $mennyiseg . "\n";
                     }
                 }
-                file_put_contents("kosar.txt", $uj_tartalom);
+                file_put_contents("cart.txt", $uj_tartalom);
             }
         }
 
         echo "<div class='cart'>";
-        $kosar_tartalom = file("kosar.txt", FILE_IGNORE_NEW_LINES);
+        $kosar_tartalom = file("cart.txt", FILE_IGNORE_NEW_LINES);
         $total = 0;
 
         echo "<table class='cart_table'>";

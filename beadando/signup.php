@@ -12,14 +12,6 @@ $errors = [];
 $accounts = loadUsers("users.txt");
 
 if (isset($_POST["signup_submit"])) {
-    $username = $_POST["username"];
-    $signup_email = $_POST["signup_email"];
-    $password = $_POST["password"];
-    $password_check = $_POST["password_check"];
-    $date_of_birth = $_POST["date_of_birth"];
-    $sex = isset($_POST["sex"]) ? $_POST["sex"] : "";
-
-
     if (!isset($_POST["username"]) || trim($_POST["username"]) === "")
         $errors[] = "<p class='reg'>A felhasználónév megadása kötelező!</p> ";
 
@@ -34,25 +26,32 @@ if (isset($_POST["signup_submit"])) {
 
     if (!isset($_POST["date_of_birth"]) || trim($_POST["date_of_birth"]) === "")
         $errors[] = "<p class='reg'>A születési dátum megadása kötelező!</p> ";
-
         
     if (!isset($_POST["sex"]) || trim($_POST["sex"]) === "")
         $errors[] = "<p class='reg'>A nem megadása kötelező!</p> ";
 
-    if (!filter_var($signup_email, FILTER_VALIDATE_EMAIL)) {
+    if (!filter_var($_POST["signup_email"], FILTER_VALIDATE_EMAIL)) {
         $errors[] = "<p class='reg'>Rossz e-mail formátum!</p>";
     }
-    if (!is_null($accounts)) {
-        foreach ($accounts as $account) {
-            if ($account["username"] === $username) {
-                $errors[] = "<p class='reg'>Ez a felhasználónév már foglalt!</p>";
-            }
+
+    $username = $_POST["username"];
+    $signup_email = $_POST["signup_email"];
+    $password = $_POST["password"];
+    $password_check = $_POST["password_check"];
+    $date_of_birth = $_POST["date_of_birth"];
+    $sex = isset($_POST["sex"]) ? $_POST["sex"] : "";
+
+  
+
+    foreach ($accounts["users"] as $account) {
+        if ($account["username"] === $username) {
+            $errors[] = "<p class='reg'>Ez a felhasználónév már foglalt!</p>";
         }
-    
-        foreach ($accounts as $account) {
-            if ($account["signup_email"] === $signup_email) {
-                $errors[] = "<p class='reg'>Ezzel az e-mail címmel már regisztráltak!</p> ";
-            }
+    }
+        
+    foreach ($accounts["users"] as $account) {
+        if ($account["signup_email"] === $signup_email) {
+            $errors[] = "<p class='reg'>Ezzel az e-mail címmel már regisztráltak!</p> ";
         }
     }
 

@@ -55,7 +55,7 @@ if ($directory === './') {
     <link rel="stylesheet" href="<?php echo $folder;?>/css/style.css">
     <link rel="stylesheet" href="<?php echo $folder;?>/css/header.css">
     <link rel="stylesheet" href="<?php echo $folder;?>/css/footer.css">
-    <link rel="stylesheet" href="<?php echo $folder;?>/css/responsiv.css">
+    <link rel="stylesheet" href="<?php echo $folder;?>/css/responsive.css">
     <link rel="stylesheet" href="<?php echo $folder;?>/css/print.css">
     <link rel="stylesheet" href="<?php echo $folder;?>/css/cart.css">
 </head>
