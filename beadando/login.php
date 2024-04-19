@@ -18,7 +18,6 @@
             <label for="passw">Jelszó:</label> <br>
             <input type="password" id="passw" name="password" minlength="6" placeholder="Min. 6 karakter"> <br>
 
-            <input type="reset" id="login_reset" value="Adatok törlése">
             <input type="submit" name="login_submit" id="login_submit" value="Belépés">
             <br><br>
             <p>Még nincs profilod? <a href="signup.php">Regisztrálj ITT!</a></p>
