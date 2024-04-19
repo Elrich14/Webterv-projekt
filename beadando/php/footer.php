@@ -1,17 +1,30 @@
 <?php
-$url = $_SERVER['REQUEST_URI'];
-$parts = explode('/', $url);
-$page = end($parts);
+    $url = $_SERVER['REQUEST_URI'];
+    $parts = explode('/', $url);
+    $page = end($parts);
+
+    $file_path = __FILE__;
+    $directory = dirname($file_path);
+    if ($directory === './') {
+        $folder = "..";
+    } else {
+        $folder = ".";
+    }
 ?>
-<?php
-$file_path = __FILE__;
-$directory = dirname($file_path);
-if ($directory === './') {
-    $folder = "..";
-} else {
-    $folder = ".";
-}
-?>
+
+<script>
+    let navbar = document.getElementById("navbar");
+    let navPos = navbar.offsetTop;
+
+    window.addEventListener("scroll", e => {
+        let scrollPos = window.scrollY;
+        if (scrollPos > navPos) {
+            navbar.classList.add('sticky');
+        } else {
+            navbar.classList.remove('sticky');
+        }
+    });
+</script>
 
 <footer>
     <div class="footertext">

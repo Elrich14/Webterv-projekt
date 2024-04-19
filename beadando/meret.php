@@ -1,7 +1,4 @@
-<?php require_once("./php/head.php");
-session_start();
-include "Common.php";
-?>
+<?php require_once("./php/head.php") ?>
 
     <!-- Tablazat -->
     <!-- Férfi méretek -->
@@ -194,20 +191,5 @@ include "Common.php";
             </table>
         </div>
     </div>
-
-    <script>
-        let navbar = document.getElementById("navbar");
-        let navPos = navbar.offsetTop;
-
-        window.addEventListener("scroll", e => {
-            let scrollPos = window.scrollY;
-            if (scrollPos > navPos) {
-                navbar.classList.add('sticky');
-            } else {
-                navbar.classList.remove('sticky');
-            }
-        });
-    </script>
-
 
 <?php require_once("./php/footer.php")?>

@@ -4,13 +4,18 @@
     $page = end($parts);
 ?>
 <?php
-$file_path = __FILE__;
-$directory = dirname($file_path);
-if ($directory === './') {
-    $folder = "..";
-} else {
-    $folder = ".";
-}
+    $file_path = __FILE__;
+    $directory = dirname($file_path);
+    if ($directory === './') {
+        $folder = "..";
+    } else {
+        $folder = ".";
+    }
+
+    if (isset($_GET['logout'])) {
+        session_unset();
+        session_destroy();
+    }
 ?>
 
 <header id="navbar">
@@ -30,7 +35,7 @@ if ($directory === './') {
         <a <?php if ($page === 'kosar.php') echo 'class="activeround"'; ?> href="<?php echo $folder;?>/kosar.php"><img class="kosar" src="<?php echo $folder;?>/media/image/shopping-cart.webp" alt="kosár"></a>
         <a <?php if ($page === 'login.php') echo 'class="activeround"'; ?> href="<?php echo $folder;?>/login.php"><img class="loginimg" src="<?php echo $folder;?>/media/image/user.webp" alt="belépés"></a>
         <?php if (isset($_SESSION["user"])) { ?>
-            <a href="<?php echo $folder;?>/logout.php"><img class="logout" src="<?php echo $folder;?>/media/image/exit.webp" alt="kilépés"></a>
+            <a href="<?php echo $folder?>/index.php?logout=true"><img class="logout" src="<?php echo $folder;?>/media/image/exit.webp" alt="kilépés"></a>
         <?php }?>
     </div>
 

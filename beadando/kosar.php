@@ -1,7 +1,12 @@
 <?php
     require_once("./php/head.php");
-    session_start();
-
+    
+    if (!isset($_SESSION["user"]) || empty($_SESSION["user"])) {
+        header("Location: login.php");
+        exit;
+    }
+?>
+<?php
     if (isset($_SESSION['logged_in'])) {
 
         if (isset($_POST['termek']) && isset($_POST['mennyiseg'])) {
@@ -54,19 +59,6 @@
         echo "<p class='osszeg'>Összesen:" . $total . " Ft </p>";
         echo "</div>";
 
-        echo "<script>";
-        echo    "let navbar = document.getElementById('navbar');";
-        echo    "let navPos = navbar.offsetTop;";
-        echo    "window.addEventListener('scroll', e => {";
-        echo        "let scrollPos = window.scrollY;";
-        echo        "if (scrollPos > navPos) {";
-        echo            "navbar.classList.add('sticky');";
-        echo        "} else {";
-        echo            "navbar.classList.remove('sticky');";
-        echo        "}";
-        echo    "});";
-        echo "</script>";
-
 
     } else {
         echo "<div class='cart_not_logged_in'>";
@@ -76,25 +68,7 @@
         echo        "<input type='submit' name='cart_login_page' value='Bejelentkezés'>";
         echo    "</form>";
         echo "</div>";
-
-        echo "<script>";
-        echo    "let navbar = document.getElementById('navbar');";
-        echo    "let navPos = navbar.offsetTop;";
-        echo    "window.addEventListener('scroll', e => {";
-        echo        "let scrollPos = window.scrollY;";
-        echo        "if (scrollPos > navPos) {";
-        echo            "navbar.classList.add('sticky');";
-        echo        "} else {";
-        echo            "navbar.classList.remove('sticky');";
-        echo        "}";
-        echo    "});";
-        echo "</script>";
     }
-
 ?>
-
-
-
-
 
 <?php require_once("./php/footer.php")?>

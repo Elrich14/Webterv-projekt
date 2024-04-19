@@ -1,7 +1,4 @@
-<?php require_once("./php/head.php");
-session_start();
-include "Common.php";
-?>
+<?php require_once("./php/head.php") ?>
     <!-- Még szerkeszteni kell -->
     <!-- Szöveg -->
     <div class="contact_us_text">
@@ -48,20 +45,5 @@ include "Common.php";
         </form>
     </div>
     <!-- Űrlap vége -->
-
-    <script>
-        let navbar = document.getElementById("navbar");
-        let navPos = navbar.offsetTop;
-
-        window.addEventListener("scroll", e => {
-            let scrollPos = window.scrollY;
-            if (scrollPos > navPos) {
-                navbar.classList.add('sticky');
-            } else {
-                navbar.classList.remove('sticky');
-            }
-        });
-    </script>
-
 
 <?php require_once("./php/footer.php")?>

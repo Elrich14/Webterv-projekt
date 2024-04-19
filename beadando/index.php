@@ -1,7 +1,4 @@
-<?php require_once("./php/head.php");
-session_start();
-include "Common.php";
-?>
+<?php require_once("./php/head.php") ?>
 
     <div class="slideshow-container">
         <div class="mySlides fade">
@@ -94,19 +91,6 @@ include "Common.php";
 
 
     <script>
-        /* sticky navbar */
-        let navbar = document.getElementById("navbar");
-        let navPos = navbar.offsetTop;
-
-        window.addEventListener("scroll", e => {
-            let scrollPos = window.scrollY;
-            if (scrollPos > navPos) {
-                navbar.classList.add('sticky');
-            } else {
-                navbar.classList.remove('sticky');
-            }
-        });
-
         /* Reklam képek slideshow */
         let slideIndex = 0;
         showSlides();

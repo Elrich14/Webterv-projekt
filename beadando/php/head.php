@@ -1,6 +1,6 @@
 <?php
-
-
+    session_start();
+    include_once "Common.php";
     $url = $_SERVER['REQUEST_URI'];
     $parts = explode('/', $url);
     $page = end($parts);
