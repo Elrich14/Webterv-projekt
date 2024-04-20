@@ -239,6 +239,15 @@ section iframe {
 /* Index */
 
 /*------Profil--------*/
+.profil h2 {
+    margin: 0 0 0 50px;
+    padding: auto;
+}
+
+.profil ul {
+    margin: 0 50px 0 10px;
+    padding: auto;
+}
 
 .profil input {
     max-width: 15vw;
@@ -252,13 +261,13 @@ section iframe {
 
 .profil form {
     float: left;
-    margin: 0 1vw 0 3vw;
+    margin: 0 20px 0 20px;
     text-align: center;
 }
 
 .profil form input {
-    font-size: 1.2vw;
-    margin: 2vw 4.5vw 1vw 0;
+    font-size: 18px;
+    margin: 20vw 4.5vw 1vw 0;
     margin: 1vw;
     width: 25vw;
     height: 3vw;
@@ -268,10 +277,8 @@ section iframe {
 }
 
 #password_change {
-    margin: 2vw 2vw;
+    margin-top: 30px;
 }
-
-
 
 input[type="submit"]:hover {
     transition: all 0.3s ease-in;
@@ -279,104 +286,77 @@ input[type="submit"]:hover {
     border: 0.3vw solid #8e8e8e;
 }
 
-.top {
-    padding-top: 7vw;
+.profile .top{
+    float: right;
+    display: flex;
+    flex-direction: column;
 }
 
-.profil h2 {
-    float: left;
-    margin: 10vw 1vw 0 1vw;
-}
-
-.profil ul {
-    float: left;
-    margin: 10vw 2vw 0 1vw;
+.profile .top form {
+    margin-bottom: 10px;
+    float: right;
 }
 
 /*------Profil--------*/
 
 /*------Ruhák--------*/
-
-.ruhak div {
-    padding: 3vw 1vw;
+.ruhak {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px auto ;
 }
 
 .picture-box {
-    width: 25%;
-    min-width: 25vw;
-    margin: 2vw 1vw 2vw 1vw;
+    width: 270px;
+    margin: 20px;
+    border: 1px solid #ccc;
+    padding: 10px 10px 0 10px;
+    transition: transform 0.3s ease-in-out;
     background-color: white;
-    border-radius: 5%;
+    border-radius: 10px;
 }
 
-.picture-box>img {
-    object-fit: cover;
-    width: 100%;
-    height: 25vw;
-    border-radius: 5%;
-}
-
-.ruhak {
-    z-index: -1;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-
-/* Egymás mellé megfelelően */
-
-[type="image"] {
-    width: 2vw;
-    height: 2vw;
-    float: right;
-    margin-right: 3vw;
-    border-radius: 20%;
-}
-
-[type="image"]:hover {
+.picture-box:hover {
     transform: scale(1.1);
-    transition: all .2s ease-in-out;
+}
+
+.gallery {
+    object-fit: contain;
+    width: 100%;
+    height: 200px;
 }
 
 .picture-box h2 {
-    font-size: 2vw;
-    margin: 2vw 0;
+    margin: 10px 0;
+    font-size: 1.2rem;
     text-align: center;
 }
 
-.picture-box p {
-    text-align: center;
-    font-size: 2vw;
-    margin: 0;
-    float: left;
+.cloth-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 20px;
 }
 
-.gallery:hover {
-    transform: scale(1.1);
-    transition: all .2s ease-in-out;
+.cloth-info p {
+    font-size: 1rem;
 }
 
-.gallery img {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+#add_cart {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border: none;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
-@media print {
-    header {
-        display: none;
-    }
-
-    video,
-    audio {
-        display: none;
-    }
+#add_cart:hover {
+    transform: scale(1.35);
+    background-color: #8e8e8e;
 }
 
-/*------Ruhák--------*/
+/*------Ruhák-------- */
 
 /*------------------Kapcsolat------------------*/
 .blank {

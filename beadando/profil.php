@@ -8,14 +8,13 @@
     }
 ?>
 
-    <div class="profil">      
-        <h2>A felhasználó adatai:</h2>
+    <div class="profil">
+        <h2>A felhasználó adatai:</h2><br>
         <ul>
             <li><b>Felhasználónév: </b> <?php echo $_SESSION["user"]["username"]?></li>
             <li><b>E-mail: </b><?php echo $_SESSION["user"]["signup_email"]?></li>
             <li><b>Birthdate: </b><?php echo $_SESSION["user"]["date_of_birth"]?></li>
-            </ul>
-
+        </ul>
         <form action="assets/controller/profil_controller.php" method="POST" id="password_change" enctype="multipart/form-data">
             <fieldset>
                 <legend>Jelszóváltás:</legend><br>
@@ -37,7 +36,6 @@
             <form action="assets/controller/profil_controller.php" method="POST" id="logout">
                 <input type="submit" name="logout" id="logout" value="Kijelentkezés">
             </form>
-
             <form action="assets/controller/profil_controller.php" method="POST" id="del">
                 <label for="delete"><b>Fiók törlése:</b></label><br>
                 <input type="submit" name="delete" id="delete" value="Fiok törlése">

@@ -1,9 +1,19 @@
 {
     "ruhak": [
         {
-            "ruhanev": "Emojis pulóver",
+            "ruhanev": "Emoji pulóver",
             "ar": 11.999,
             "img": "pulcsi_1.jpg"
+        },
+        {
+            "ruhanev": "Mupa pulóver",
+            "ar": 9.999,
+            "img": "pulcsi_2.jpg"
+        },
+        {
+            "ruhanev": "Simple pulóver",
+            "ar": 4.999,
+            "img": "pulcsi_3.jpg"
         },
         {
             "ruhanev": "Q&amp;W",
@@ -26,6 +36,11 @@
             "img": "polo_3.jpg"
         },
         {
+            "ruhanev": "Wtar Sars póló",
+            "ar": 14.999,
+            "img": "polo_4.jpg"
+        },
+        {
             "ruhanev": "Z&amp;B nadrág",
             "ar": 10.999,
             "img": "nadrag_1.jpg"
@@ -34,6 +49,36 @@
             "ruhanev": "Laza utcai nadrág több színben",
             "ar": 14.999,
             "img": "nadrag_2.jpg"
+        },
+        {
+            "ruhanev": "Dzseki 1",
+            "ar": 7.999,
+            "img": "dzseki_1.jpg"
+        },
+        {
+            "ruhanev": "Dzseki 7",
+            "ar": 9.999,
+            "img": "dzseki_2.jpg"
+        },
+        {
+            "ruhanev": "Fura jövős dzseki",
+            "ar": 19.999,
+            "img": "dzseki_3.jpg"
+        },
+        {
+            "ruhanev": "Menő melegítő",
+            "ar": 15.999,
+            "img": "melegito_1.jpg"
+        },
+        {
+            "ruhanev": "Melegítő",
+            "ar": 6.999,
+            "img": "melegito_2.jpg"
+        },
+        {
+            "ruhanev": "Fekete melegítő",
+            "ar": 9.999,
+            "img": "melegito_3.jpg"
         }
     ]
 }

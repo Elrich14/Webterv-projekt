@@ -36,6 +36,7 @@
 
     $file_path = __FILE__;
     $directory = dirname($file_path);
+    
     if ($directory === './') {
         $folder = "..";
     } else {
@@ -56,6 +57,8 @@
     <link rel="stylesheet" href="<?php echo $folder;?>/css/responsive.css">
     <link rel="stylesheet" href="<?php echo $folder;?>/css/print.css">
     <link rel="stylesheet" href="<?php echo $folder;?>/css/cart.css">
+    <script src="<?php echo $folder;?>/js/custom_alert.js"></script>
+    <script src="<?php echo $folder;?>/js/sticky_nav.js"></script>
 </head>
 
 <body>

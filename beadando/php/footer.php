@@ -10,20 +10,24 @@
     } else {
         $folder = ".";
     }
-?>
+
+    if (isset($_SESSION['alertType'])) {
+        $message = $_SESSION["message"];
+        $alertType = $_SESSION["alertType"];
+        unset($_SESSION['alertType']);
+        unset($_SESSION['message']);
+    ?>
+        <script>
+            <?php foreach ($messages as $message){?>
+                showAlert("<?php echo $message ?>", "<?php echo $alertType ?>");
+            <?php } ?>
+        </script>
+    <?php 
+    }
+    ?>
 
 <script>
-    let navbar = document.getElementById("navbar");
-    let navPos = navbar.offsetTop;
-
-    window.addEventListener("scroll", e => {
-        let scrollPos = window.scrollY;
-        if (scrollPos > navPos) {
-            navbar.classList.add('sticky');
-        } else {
-            navbar.classList.remove('sticky');
-        }
-    });
+    sticky_nav();
 </script>
 
 <footer>

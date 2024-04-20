@@ -50,7 +50,7 @@
     background-color: #555;
 }
 
-form input {
+.col-2 form input {
     width: 400px;
     height: 45px;
     border-radius: 4px;
@@ -61,7 +61,7 @@ form input {
     border: none;
 }
 
-form button {
+.col-2 form button {
     background: transparent;
     border: 4px solid #fff;
     color: #fff;
@@ -70,7 +70,7 @@ form button {
     font-size: 15px;
 }
 
-form button:hover {
+.col-2 form button:hover {
     transition: all 0.3s ease-in;
     color: #0088a9;
     border: 4px solid #8e8e8e;

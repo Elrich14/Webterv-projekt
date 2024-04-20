@@ -1,6 +1,6 @@
 <?php 
     require_once("./php/head.php");
-    include_once("assets/functions/ruha_functions.php");
+    include("assets/functions/ruha_functions.php");
 
     $ruhak = loadRuhak();
 ?>
@@ -15,12 +15,14 @@
         <div class="picture-box">
             <img class="gallery" src="media/ruha_img/<?php echo $img ?>" alt=<?php echo $nev ?>>
             <h2><?php echo $nev ?></h2>
-            <p><?php echo $ar ?> Ft</p>
-            <form method="post" action="assets/controller/ruha_controller.php">
-                <input type="hidden" name="nev" value="<?php echo $nev ?>">
-                <input type="hidden" name="ar" value="<?php echo $ar ?>">
-                <input type="image" name="add_cart" src="./media/image/shopping-cart.webp" alt="<?php echo $nev.' '.$ar.' '.$img ?>">
-            </form>
+            <div class="cloth-info">
+                <p><?php echo $ar ?> Ft</p>
+                <form method="post" action="assets/controller/ruha_controller.php">
+                    <input type="hidden" name="nev" value="<?php echo $nev ?>">
+                    <input type="hidden" name="ar" value="<?php echo $ar ?>">
+                    <input type="image" name="add_cart" id="add_cart" src="./media/image/shopping-cart.webp" alt="<?php echo $nev.' '.$ar.' '.$img ?>">
+                </form>
+            </div>
         </div>
         <?php   
         }
