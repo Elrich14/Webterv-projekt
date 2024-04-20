@@ -1,6 +1,6 @@
 <?php 
     require_once("./php/head.php");
-    require("assets/functions/ruha_functions.php");
+    include_once("assets/functions/ruha_functions.php");
 
     $ruhak = loadRuhak();
 ?>

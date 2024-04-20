@@ -72,7 +72,7 @@
             ];
 
             saveUser($data);
-            header("Location: ../login.php");
+            header("Location: ../../login.php");
         } else {
             foreach ($errors as $error) {
                 echo $error;

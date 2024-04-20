@@ -1,6 +1,6 @@
 <?php
     require_once("./php/head.php");
-    require("assets/functions/kosar_functions.php");
+    include_once("assets/functions/kosar_functions.php");
     
     if (!isset($_SESSION["user"]) || empty($_SESSION["user"])) {
         $message = "Előbb jelentkezz be a fiókodba, hogy láthasd a kosarad.";

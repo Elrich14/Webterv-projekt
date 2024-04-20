@@ -17,7 +17,6 @@
                             $user_data["username"] = $account["username"];
                             $user_data["signup_email"] = $account["signup_email"];
                             $user_data["password"] = $account["password"];
-                            $user_data["password_check"] = $account["password_check"];
                             $user_data["date_of_birth"] = $account["date_of_birth"];
                             $successful_login = true;
                             break;
@@ -29,17 +28,17 @@
             }
         } else {
             $err = "<p class='signup'>Mindkét mező kitöltése kötelező!</p>";
-            header("Location: ../login.php");
+            header("Location: ../../login.php");
         }
     }
 
     if ($successful_login) {
         $_SESSION["user"] = $user_data;
         $_SESSION['logged_in'] = true;
-        header("Location: ../profil.php");
+        header("Location: ../../profil.php");
         exit;
     } else {
         echo $err;
-        header("Location: ../login.php");
+        header("Location: ../../login.php");
     }
 ?>

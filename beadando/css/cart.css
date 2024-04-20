@@ -1,6 +1,9 @@
 .cart {
     font-size: 1vw;
-    margin: 2vw 0 0 10vw;
+    min-height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .cart th{

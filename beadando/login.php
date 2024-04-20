@@ -1,6 +1,5 @@
 <?php
     require_once("./php/head.php");
-    include_once("assets/controller/user_functions.php"); 
 
     if (isset($_SESSION["user"]) || !empty($_SESSION["user"])) {
         header("Location: profil.php");
