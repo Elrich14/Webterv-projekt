@@ -1,74 +1,53 @@
 <?php
     require_once("./php/head.php");
+    require("assets/functions/kosar_functions.php");
     
     if (!isset($_SESSION["user"]) || empty($_SESSION["user"])) {
+        $message = "Előbb jelentkezz be a fiókodba, hogy láthasd a kosarad.";
         header("Location: login.php");
         exit;
     }
-?>
-<?php
-    if (isset($_SESSION['logged_in'])) {
 
-        if (isset($_POST['termek']) && isset($_POST['mennyiseg'])) {
-            $termek = $_POST['termek'];
-            $mennyiseg = $_POST['mennyiseg'];
-            $kosar_tomb = file("cart.txt", FILE_IGNORE_NEW_LINES);
-            $uj_tartalom = "";
-            if ($mennyiseg == 0) {
-                foreach ($kosar_tomb as $sor) {
-                    if (strpos($sor, $termek) !== 0) {
-                        $uj_tartalom .= $sor . "\n";
-                    }
-                }
-                file_put_contents("cart.txt", $uj_tartalom);
-            } else {
-                foreach ($kosar_tomb as $sor) {
-                    if (strpos($sor, $termek) !== 0) {
-                        $uj_tartalom .= $sor . "\n";
-                    } else {
-                        $uj_tartalom .= $termek . ";" . $mennyiseg . "\n";
-                    }
-                }
-                file_put_contents("cart.txt", $uj_tartalom);
-            }
-        }
-
-        echo "<div class='cart'>";
-        $kosar_tartalom = file("cart.txt", FILE_IGNORE_NEW_LINES);
-        $total = 0;
-
-        echo "<table class='cart_table'>";
-        echo "<tr><th>Termék név</th><th>Ár</th><th>Mennyiség / Módosítás</th></tr>";
-
-        foreach ($kosar_tartalom as $termek) {
-            $adatok = explode(";", $termek);
-            $nev = $adatok[0];
-            $ar = $adatok[1];
-            $mennyiseg = $adatok[2];
-            $total += $ar * $mennyiseg;
-
-            echo "<tr><td>" . $nev . "</td><td>" . $ar . " FT</td>";
-            echo "<td><form method='post'>";
-            echo "<input type='hidden' name='termek' value='" . $nev . ";" . $ar . "'/>";
-            echo "<input type='number' name='mennyiseg' min='0' value='" . $mennyiseg . "'/>";
-            echo "<input type='submit' value='Módosítása'/>";
-            echo "</form></td></tr>";
-        }
-
-        echo "</table>";
-        echo "<p class='osszeg'>Összesen:" . $total . " Ft </p>";
-        echo "</div>";
-
-
-    } else {
-        echo "<div class='cart_not_logged_in'>";
-        echo    "<h1>Nem vagy bejelentkezve.</h1>";
-        echo    "<h2>Kattints az alábbi linkre a bejelentkezéshez, hogy megtudd mik várnak rád a kosaradban.</h2>";
-        echo    "<form action='login.php' method='get'>";
-        echo        "<input type='submit' name='cart_login_page' value='Bejelentkezés'>";
-        echo    "</form>";
-        echo "</div>";
-    }
+    $ruhak = loadCart();
+    if(!empty($ruhak)) {
+        $total = sumCartPrice();
 ?>
 
+    <div class='cart'>
+        <table class='cart_table'>
+        <tr>
+            <th>Termék neve</th>
+            <th>Ár</th>
+            <th>Mennyiség</th>
+            <th>Módosítás</th>
+            <th>Törlés</th>
+        </tr>
+        <?php
+        foreach ($ruhak["cart"] as $ruha) {
+            $nev = $ruha["ruhanev"];
+            $ar = $ruha["ar"];
+            $db = $ruha["db"];
+        ?>
+        <tr>
+            <td><?php echo $nev ?></td>
+            <td><?php echo $ar ?> FT</td>
+            <form method='post' action="assets/controller/cart_controller.php">
+                <td><input type='number' name='db' min='0' value="<?php echo $db ?>"/></td>
+                <input type='hidden' name='nev' value="<?php echo $nev ?>"/>
+                <input type='hidden' name='ar' value="<?php echo $ar ?>"/>
+                <td><input type='submit' name="change" value='Módosítása'/></td>
+                <td><input type='submit'name="delete" value='Törlés'/></td>
+            </form>
+        </tr>
+        <?php } ?>
+
+        </table>
+        <p class='osszeg'>Összesen: <?php echo $total ?> Ft</p>
+    </div>
+<?php } else { ?>
+    <div class='cart'>
+        <h2>Még nem raktál semmit semmit a kosaradba. Előbb helyezz el termékeket a kosaradba, hogy lásd a végösszeget.</h2>
+    </div>
+<?php } ?>
+    
 <?php require_once("./php/footer.php")?>

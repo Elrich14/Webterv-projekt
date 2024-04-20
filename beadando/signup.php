@@ -1,5 +1,6 @@
 <?php
     require_once("./php/head.php");
+    include_once("assets/controller/user_functions.php"); 
 
     if (isset($_SESSION["user"]) || !empty($_SESSION["user"])) {
         header("Location: profil.php");
@@ -11,7 +12,7 @@
 <div id="content">
 
     <div class="signup">
-        <form action="controller/signup_controller.php" method="POST">
+        <form action="assets/controller/signup_controller.php" method="POST">
             <fieldset>
                 <legend>Regisztráció</legend>
                 

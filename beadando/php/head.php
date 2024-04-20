@@ -41,9 +41,6 @@
     } else {
         $folder = ".";
     }
-
-    $mappa = $folder."/controller/functions.php";
-    include_once($mappa);
 ?>
 
 <!DOCTYPE html>

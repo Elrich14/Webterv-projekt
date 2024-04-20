@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include "functions.php";
+    include "../functions/user_functions.php";
     
     $accounts = loadUsers();
     $errors = [];

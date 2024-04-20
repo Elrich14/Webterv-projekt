@@ -1,5 +1,6 @@
 <?php
     require_once("./php/head.php");
+    include_once("assets/controller/user_functions.php"); 
     
     if (!isset($_SESSION["user"]) || empty($_SESSION["user"])) {
         header("Location: login.php");
@@ -15,7 +16,7 @@
             <li><b>Birthdate: </b><?php echo $_SESSION["user"]["date_of_birth"]?></li>
             </ul>
 
-        <form action="controller/profil_controller.php" method="POST" id="password_change" enctype="multipart/form-data">
+        <form action="assets/controller/profil_controller.php" method="POST" id="password_change" enctype="multipart/form-data">
             <fieldset>
                 <legend>Jelszóváltás:</legend><br>
                 
@@ -33,11 +34,11 @@
         </form>
 
         <div class="top">
-            <form action="controller/profil_controller.php" method="POST" id="logout">
+            <form action="assets/controller/profil_controller.php" method="POST" id="logout">
                 <input type="submit" name="logout" id="logout" value="Kijelentkezés">
             </form>
 
-            <form action="controller/profil_controller.php" method="POST" id="del">
+            <form action="assets/controller/profil_controller.php" method="POST" id="del">
                 <label for="delete"><b>Fiók törlése:</b></label><br>
                 <input type="submit" name="delete" id="delete" value="Fiok törlése">
             </form>

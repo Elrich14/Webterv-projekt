@@ -1,0 +1,39 @@
+{
+    "ruhak": [
+        {
+            "ruhanev": "Emojis pulóver",
+            "ar": 11.999,
+            "img": "pulcsi_1.jpg"
+        },
+        {
+            "ruhanev": "Q&amp;W",
+            "ar": 19.999,
+            "img": "kabat1.jpg"
+        },
+        {
+            "ruhanev": "KCALB 8 póló",
+            "ar": 4.999,
+            "img": "polo_1.jpg"
+        },
+        {
+            "ruhanev": "Dark line póló",
+            "ar": 5.499,
+            "img": "polo_2.jpg"
+        },
+        {
+            "ruhanev": "Breaking Bad póló",
+            "ar": 6.999,
+            "img": "polo_3.jpg"
+        },
+        {
+            "ruhanev": "Z&amp;B nadrág",
+            "ar": 10.999,
+            "img": "nadrag_1.jpg"
+        },
+        {
+            "ruhanev": "Laza utcai nadrág több színben",
+            "ar": 14.999,
+            "img": "nadrag_2.jpg"
+        }
+    ]
+}
