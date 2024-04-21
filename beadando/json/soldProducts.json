@@ -3,7 +3,7 @@
         {
             "ruhanev": "Simple pulóver",
             "ar": "4.999",
-            "db": 2
+            "db": 5
         },
         {
             "ruhanev": "Mupa pulóver",
@@ -14,6 +14,11 @@
             "ruhanev": "Emoji pulóver",
             "ar": "11.999",
             "db": "5"
+        },
+        {
+            "ruhanev": "Q&W",
+            "ar": "19.999",
+            "db": 1
         }
     ]
 }

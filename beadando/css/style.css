@@ -493,6 +493,49 @@ h2 {
 }
 /*----signup----*/
 
+/*-----ADMIN------*/
+.admin-page {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+.sold-products h2 {
+    margin-bottom: 20px;
+}
+
+.sold-table {
+    border-collapse: collapse;
+    width: 80%;
+}
+
+.sold-table th, .sold-table td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+
+.sold-table th {
+    background-color: #aaaaaa;
+}
+
+.sold-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.sold-table tr:hover {
+    background-color: #8e8e8e;
+}
+
+.sold-sum {
+    width: 90%;
+    text-align: right;
+    margin: 20px 0;
+}
+
+
+/*-----ADMIN------*/
+
 /* reszponzivitas */
 
 @media screen and (max-width: 1337px) {

@@ -5,6 +5,8 @@
     $fileURL = "json/cart.json";
     $boughtFileURL = "json/soldProducts.json";
 
+    require_once "admin_functions.php";
+
 
     if($page === "ruha_controller.php" || $page == "cart_controller.php"){
         $fileURL = "../../json/cart.json";
@@ -21,16 +23,6 @@
 
         return json_decode($json, true);
     }
-    
-    function loadBoughtProducts() {
-        global $boughtFileURL;
-        if (!file_exists($boughtFileURL))
-            die("Nem sikerült a fájl megnyitása!");
-
-        $json = file_get_contents($boughtFileURL);
-
-        return json_decode($json, true);
-    }
 
     function saveCart($data) {
         global $fileURL;
@@ -40,16 +32,6 @@
         $json_data = json_encode($kosar, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
 
         file_put_contents($fileURL, $json_data);
-    }
-
-    function saveBoughtProduct($data) {
-        global $boughtFileURL;
-        $kosar = loadBoughtProducts();
-        $kosar["eladott_ruhak"][] = $data;
-
-        $json_data = json_encode($kosar, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
-
-        file_put_contents($boughtFileURL, $json_data);
     }
 
     function sumCartPrice(){
@@ -84,19 +66,6 @@
         foreach ($ruhak["cart"] as $ruha) {
             if (!($deleteCartName === $ruha["ruhanev"])) {
                 saveCart($ruha);
-            }
-        }
-    }
-
-    function deleteProduct($deleteProductName) {
-        global $boughtFileURL;
-        $products = loadCart();
-        $resetProduct = fopen($boughtFileURL, "w");
-        fclose($resetProduct);
-
-        foreach ($products["cart"] as $product) {
-            if (!($deleteProductName === $product["ruhanev"])) {
-                saveCart($product);
             }
         }
     }

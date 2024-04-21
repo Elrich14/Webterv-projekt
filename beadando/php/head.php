@@ -17,6 +17,9 @@
         case "kapcsolat.php":
             $title = "Kapcsolat";
             break;
+        case "admin.php":
+            $title = "Admin";
+            break;
         case "login.php":
             $title = "Bejelentkezés";
             break;

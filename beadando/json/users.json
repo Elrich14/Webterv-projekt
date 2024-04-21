@@ -27,6 +27,13 @@
             "password": "$2y$10$teymvd\/\/F7ISabQ6AbpsuuyWz3Tys8PUORwMfBB2W1nXh0uzaiSFy",
             "date_of_birth": "1111-11-11",
             "sex": "F"
+        },
+        {
+            "username": "ADMIN",
+            "signup_email": "admin@admin.hu",
+            "password": "$2y$10$S4pFC9RdVbsS2eOxIBmIWeBbqhohTPq2CBRy8ieyhmiSqoml6rU4S",
+            "date_of_birth": "1111-11-11",
+            "sex": "F"
         }
     ]
 }
