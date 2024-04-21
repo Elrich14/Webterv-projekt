@@ -1,41 +1,75 @@
 <?php
+    if(session_status() == PHP_SESSION_NONE) {
+        session_start();
+    }
+    require_once "admin_functions.php";
+    
     $url = $_SERVER['REQUEST_URI'];
     $parts = explode('/', $url);
     $page = end($parts);
-    $fileURL = "json/cart.json";
-    $boughtFileURL = "json/soldProducts.json";
 
-    require_once "admin_functions.php";
+    $cartURL = (!isset($_SESSION["user"])) ? "json/tmpCart.json" : "json/userdata/" . $_SESSION["user"]["username"] . "/cart.json"; 
+    $boughtURL = (!isset($_SESSION["user"])) ? NULL : "json/userdata/" . $_SESSION["user"]["username"] . "/bought.json";
+    $allSellsURL = "json/soldProducts.json";
 
-
-    if($page === "ruha_controller.php" || $page == "cart_controller.php"){
-        $fileURL = "../../json/cart.json";
-        $boughtFileURL = "../../json/soldProducts.json";
-
+    if ($page === "ruha_controller.php" || $page == "cart_controller.php" || $page == "login_controller.php") {
+        $cartURL = "../../" . ((!isset($_SESSION["user"])) ? ("json/tmpCart.json") : ("json/userdata/" . $_SESSION["user"]["username"] . "/cart.json")); 
+        $boughtURL = "../../" . ((!isset($_SESSION["user"])) ? NULL : "json/userdata/" . $_SESSION["user"]["username"] . "/bought.json");
+        $allSellsURL = "../../json/soldProducts.json";
     }
 
     function loadCart() {
-        global $fileURL;
-        if (!file_exists($fileURL))
+        global $cartURL;
+        if (!file_exists($cartURL))
             die("Nem sikerült a fájl megnyitása!");
 
-        $json = file_get_contents($fileURL);
+        $json = file_get_contents($cartURL);
+
+        return json_decode($json, true);
+    }
+
+    function loadBought() {
+        global $boughtURL;
+        if (!file_exists($boughtURL))
+            die("Nem sikerült a fájl megnyitása!");
+
+        $json = file_get_contents($boughtURL);
 
         return json_decode($json, true);
     }
 
     function saveCart($data) {
-        global $fileURL;
+        global $cartURL;
+        if (isset($_SESSION["user"])) {
+            $cartURL = "../../json/userdata/" . $_SESSION["user"]["username"] . "/cart.json"; 
+        }
+
         $kosar = loadCart();
         $kosar["cart"][] = $data;
 
         $json_data = json_encode($kosar, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
+        
+        file_put_contents($cartURL, $json_data);
+    }
 
-        file_put_contents($fileURL, $json_data);
+    function saveBought($data) {
+        global $boughtURL;
+        if (isset($_SESSION["user"])) {
+            $boughtURL = "../../json/userdata/" . $_SESSION["user"]["username"] . "/bought.json";
+        }
+
+        $date = date("Y-M-d, G:i");
+        $kosar = loadBought();
+
+        $kosar["eladott_ruhak"][$date][] = $data;
+
+        $json_data = json_encode($kosar, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
+        
+        file_put_contents($boughtURL, $json_data);
     }
 
     function sumCartPrice(){
-        global $fileURL;
+        global $cartURL;
         $kosar = loadCart();
         $sum = 0;
         foreach($kosar["cart"] as $ruha){
@@ -58,9 +92,9 @@
     }
 
     function deleteCart($deleteCartName) {
-        global $fileURL;
+        global $cartURL;
         $ruhak = loadCart();
-        $cart = fopen($fileURL, "w");
+        $cart = fopen($cartURL, "w");
         fclose($cart);
 
         foreach ($ruhak["cart"] as $ruha) {
@@ -71,9 +105,9 @@
     }
 
     function changeCart($data) {
-        global $fileURL;
+        global $cartURL;
         $ruhak = loadCart();
-        $resetCart = fopen($fileURL, "w");
+        $resetCart = fopen($cartURL, "w");
         fclose($resetCart);
 
         if(!is_null($ruhak)) {
@@ -83,7 +117,7 @@
                 }
             }
         }
-
+        
         foreach($ruhak["cart"] as $ujruha){
             if($ujruha["db"] > 0){
                 saveCart($ujruha);
@@ -92,18 +126,19 @@
     }
 
     function buyProducts(){
-        global $fileURL;
-        global $boughtFileURL;
+        global $cartURL;
+        global $allSellsURL;
+
         $ruhak = loadCart();
-        $resetCart = fopen($fileURL, "w");
+        $resetCart = fopen($cartURL, "w");
         fclose($resetCart);
 
         $soldProducts = loadBoughtProducts();
-        $resetSoldProducts = fopen($boughtFileURL, "w");
+        $resetSoldProducts = fopen($allSellsURL, "w");
         fclose($resetSoldProducts);
         
         if(is_null($soldProducts)) {
-            foreach($ruhak as $ruha) {
+            foreach($ruhak["cart"] as $ruha) {
                 saveBoughtProduct($ruha);
             }
         } else {
@@ -126,6 +161,11 @@
             foreach($soldProducts["eladott_ruhak"] as $sold){
                 saveBoughtProduct($sold);
             }
+        }
+
+        //uj dátum, ezért nem kell fölöslegesen másolgatni
+        foreach($ruhak["cart"] as $cloth){
+            saveBought($cloth);
         }
     }
 ?>

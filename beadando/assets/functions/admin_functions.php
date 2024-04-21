@@ -1,6 +1,11 @@
 <?php
     require_once "kosar_functions.php";
-    $boughtFileURL = "json/soldProducts.json";
+    $url = $_SERVER['REQUEST_URI'];
+    $parts = explode('/', $url);
+    $page = end($parts);
+
+    $boughtFileURL = $page==="admin.php"?"json/soldProducts.json":"../../json/soldProducts.json";
+
 
     function loadBoughtProducts() {
         global $boughtFileURL;

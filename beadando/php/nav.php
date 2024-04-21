@@ -15,6 +15,7 @@
     if (isset($_GET['logout'])) {
         session_unset();
         session_destroy();
+        header("Location: index.php");
     }
 ?>
 
@@ -27,8 +28,8 @@
                 <li> <a <?php if ($page === 'ruhak.php') echo 'class="active"'; ?> href="<?php echo $folder;?>/ruhak.php">Ruhák</a></li>
                 <li> <a <?php if ($page === 'meret.php') echo 'class="active"'; ?> href="<?php echo $folder;?>/meret.php">Méret táblázat</a></li>
                 <li> <a <?php if ($page === 'kapcsolat.php') echo 'class="active"'; ?>href="<?php echo $folder;?>/kapcsolat.php">Kapcsolat</a></li>
-                <?php if($_SESSION["user"]["username"] == "ADMIN") { ?>
-                    <li> <a <?php if ($page === 'admin.php') echo 'class="active admin-nav"'; ?>href="<?php echo $folder;?>/admin.php">Admin</a></li>
+                <?php if(isset($_SESSION["user"]) && $_SESSION["user"]["username"] == "ADMIN") { ?>
+                    <li> <a <?php if ($page === 'admin.php') echo 'class="active admin-nav"'; ?> href="<?php echo $folder;?>/admin.php">Admin</a></li>
                 <?php }?>
             </ul>
         </nav>

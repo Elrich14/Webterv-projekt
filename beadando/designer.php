@@ -2,7 +2,7 @@
 
     <div class="content">
         <section>
-            <iframe width="480" height="360" src="https://www.youtube.com/embed/eKnHjVeZPPw?si=ODHH42I8N0JlKEvZ?controls=1&mute=1">
+            <iframe width="480" height="360" src="https://www.youtube.com/embed/eKnHjVeZPPw?si=ODHH42I8N0JlKEvZ?controls=1&amp;mute=1">
             </iframe>
             <h1>Birkl&amp;Zentai&nbsp;Közös&nbsp;Vállalkozás</h1>
             <p>

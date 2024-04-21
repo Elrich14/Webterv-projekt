@@ -1,37 +1,37 @@
 {
     "users": [
         {
+            "username": "ADMIN",
+            "signup_email": "admin@admin.hu",
+            "password": "$2y$10$CCPFT6aLpjpsCmAPV6s4yOmQWMFh.rAJI86z8fBaVHQfWOrioETB6",
+            "date_of_birth": "1111-11-11",
+            "sex": "F"
+        },
+        {
             "username": "erik",
             "signup_email": "erik@gmail.com",
-            "password": "$2y$10$yo\/WzfDXNRvnj.Eko\/Je9OtzZ9wTkGUGyoy0SjjjLdWCPmL\/GgAh6",
+            "password": "$2y$10$hPytimHg58TDGfGGRfH1wOBndDxEXOjJugcz1iaXHlIrzniSmQtGS",
             "date_of_birth": "1111-11-11",
-            "sex": "N"
+            "sex": "F"
         },
         {
             "username": "norbi",
             "signup_email": "norbi@gmail.com",
-            "password": "$2y$10$5dw6fQU28Q9kpcmIzj1HhOsb5PCEC22oCTcTuRa0LQcFoBxFVD85u",
+            "password": "$2y$10$7oDQRi.lVe7yFFCeXGsvqeWQyliayWAIByZ0dULc9Puby1eIeTAsu",
             "date_of_birth": "1111-11-11",
             "sex": "F"
-        },
-        {
-            "username": "test_sok",
-            "signup_email": "test@test.com",
-            "password": "$2y$10$sdqj0nZg9.NIXpOP9CGG1uWMye1k8Ze6CBP.xt3DN35fgnO4qacom",
-            "date_of_birth": "0011-11-11",
-            "sex": "N"
         },
         {
             "username": "test",
             "signup_email": "test@gmail.com",
-            "password": "$2y$10$teymvd\/\/F7ISabQ6AbpsuuyWz3Tys8PUORwMfBB2W1nXh0uzaiSFy",
+            "password": "$2y$10$oaL7DT7seVlqp.xOLtNrvueQU6\/n0xZ5eCiR1.xUtMCY\/KDWiGnou",
             "date_of_birth": "1111-11-11",
-            "sex": "F"
+            "sex": "N"
         },
         {
-            "username": "ADMIN",
-            "signup_email": "admin@admin.hu",
-            "password": "$2y$10$S4pFC9RdVbsS2eOxIBmIWeBbqhohTPq2CBRy8ieyhmiSqoml6rU4S",
+            "username": "janos",
+            "signup_email": "janos@gmail.com",
+            "password": "$2y$10$G3OrmyXEBQPraJ70qVgyseren9BLSJQB7XRDaQ0tBUc7hdCVNBHpC",
             "date_of_birth": "1111-11-11",
             "sex": "F"
         }

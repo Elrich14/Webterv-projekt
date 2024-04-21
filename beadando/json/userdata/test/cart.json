@@ -1,0 +1,14 @@
+{
+    "cart": [
+        {
+            "ruhanev": "Mupa pulóver",
+            "ar": "9.999",
+            "db": 1
+        },
+        {
+            "ruhanev": "Simple pulóver",
+            "ar": "4.999",
+            "db": 2
+        }
+    ]
+}

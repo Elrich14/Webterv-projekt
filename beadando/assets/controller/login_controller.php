@@ -1,5 +1,7 @@
 <?php
-    session_start();
+    if(session_status() == PHP_SESSION_NONE) {
+        session_start();
+    }
     include "../functions/user_functions.php";
 
     $successful_login = false;
@@ -34,7 +36,7 @@
 
     if ($successful_login) {
         $_SESSION["user"] = $user_data;
-        $_SESSION['logged_in'] = true;
+        checkCart();
         header("Location: ../../profil.php");
         exit;
     } else {

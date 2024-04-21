@@ -9,7 +9,6 @@
 ?>
 
 <div id="content">
-
     <div class="signup">
         <form action="assets/controller/signup_controller.php" method="POST">
             <fieldset>
@@ -43,7 +42,7 @@
                 </div>
 
                 <input type="reset" name="signup_reset" id="signup_reset" value="Alaphelyzet">
-                <input type="submit" name="signup_submit" value="Regisztráció">
+                <input type="submit" name="signup_submit" id="signup_submit" value="Regisztráció">
             </fieldset>
         </form>
     </div>

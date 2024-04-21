@@ -7,6 +7,7 @@
 
     if (isset($_POST["delete"])) {
         deleteUser($_SESSION["user"]["username"]);
+        header("Location: ../../index.php");
     }
 
     if (isset($_POST["logout"])) {

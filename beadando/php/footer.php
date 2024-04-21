@@ -28,6 +28,22 @@
 
 <script>
     sticky_nav();
+
+    <?php
+    if (isset($_SESSION["messages"])) {
+        foreach ($_SESSION["messages"] as $message) {
+            if ($message["type"] === "success") {
+                echo "showAlert('" . $message["message"] . "', 'success');";
+            }
+        }
+        foreach ($_SESSION["messages"] as $message) {
+            if ($message["type"] === "danger") {
+                echo "showAlert('" . $message["message"] . "', 'danger');";
+            }
+        }
+        //unset($_SESSION["messages"]);
+    }
+    ?>
 </script>
 
 <footer>

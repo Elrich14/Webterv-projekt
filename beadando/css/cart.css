@@ -1,85 +1,103 @@
 .cart {
-    font-size: 1vw;
-    min-height: 40vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.cart th{
-    font-size: 1.3vw;
-    padding: 1vw;
-}
-
-.cart [type='number']{
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    max-width: 60%;
     text-align: center;
-    margin: 0 1vw;
-    padding: 0;
-    width: 5vw;
-    height: 2vw;
-    border-radius: 2vw;
 }
 
-.cart [type='submit']{
-    border-radius: 2vw;
-    padding: 0.3vw 1vw;
-    border: none;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+.cart-heading {
+    font-size: 32px;
+    color: #333;
 }
 
-.cart [type='submit']:hover{
-    font-size: 1.1vw;
-    border-radius: 2vw;
-    padding: 0.25vw 0.75vw;
-    border: none;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+.cart h2 {
+    margin-bottom: 20px;
 }
 
-/*nyilak eltüntetése böngészökben*/
-.cart input::-webkit-inner-spin-button {
-    /* display: none; <- Crashes Chrome on hover */
-    -webkit-appearance: none;
-    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+.cart-table-container {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
 }
-input[type=number] {
-    -moz-appearance: textfield;
+
+.cart_table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+.cart_table th, .cart_table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+}
+
+.cart_table th, .cart_table td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+
+.cart_table th {
+    background-color: #aaaaaa;
+}
+
+.cart_table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.cart_table tr:hover {
+    background-color: #8e8e8e;
+}
+
+.cart_table td input[type='number'] {
+    width: 60px;
+    text-align: center;
+}
+
+.cart_table td input[type='submit'] {
+    padding: 5px 10px;
+    border: 1px solid #8e8e8e;
+    border-radius: 30px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.cart_table td input[type='submit']:hover {
+    transition: all 0.3s ease-in;
+    color: #0088a9;
+    border: 4px solid #8e8e8e;
+    border-color: #aaaaaa;
+    padding: 2px 12px;
+}
+
+.summary {
+    text-align: center;
+    margin-top: 20px;
 }
 
 .osszeg {
-    margin-left: 23vw;
-    font-size: 1.5vw;
+    font-size: 18px;
+    margin-bottom: 10px;
 }
 
-.cart_not_logged_in {
-    margin:5vw auto 15vw auto;
-    text-align: center;
+#buy-button {
+    font-size: 14px;
+    padding: 10px 20px;
+    border: 3px solid #8e8e8e;
+    border-radius: 30px;
+    font-size: 15px;
+    cursor: pointer;
 }
 
-.cart_not_logged_in h1 {
-    font-size: 2vw;
-    margin:0 auto 2vw auto;
-    text-align: center;
-}
-
-.cart_not_logged_in h2 {
-    font-size: 1.5vw;
-    margin:0 auto 2vw auto;
-    text-align: center;
-}
-
-.cart_not_logged_in input {
-    width: 25vw;
-    height: 3vw;
-    border-radius: 4vw;
-    text-align: center;
-    margin-top: 1.5vw;
-    margin-bottom: 2.5vw;
-    outline: none;
-    border: none;
-}
-
-.cart_not_logged_in input:hover {
+#buy-button:hover {
     transition: all 0.3s ease-in;
     color: #0088a9;
-    border: 0.3vw solid #8e8e8e;
+    border: 5px solid #8e8e8e;
+    padding: 8px 28px;
 }

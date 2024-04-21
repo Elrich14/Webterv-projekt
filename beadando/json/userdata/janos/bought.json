@@ -1,0 +1,23 @@
+{
+    "eladott_ruhak": {
+        "2024-Apr-21, 21:52": [
+            {
+                "ruhanev": "Mupa pulóver",
+                "ar": "9.999",
+                "db": 1
+            }
+        ],
+        "2024-Apr-21, 21:53": [
+            {
+                "ruhanev": "Mupa pulóver",
+                "ar": "9.999",
+                "db": 1
+            },
+            {
+                "ruhanev": "Emoji pulóver",
+                "ar": "11.999",
+                "db": 1
+            }
+        ]
+    }
+}

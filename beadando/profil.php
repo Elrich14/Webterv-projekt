@@ -33,13 +33,41 @@
         </form>
 
         <div class="top">
-            <form action="assets/controller/profil_controller.php" method="POST" id="logout">
+            <form action="assets/controller/profil_controller.php" method="POST">
                 <input type="submit" name="logout" id="logout" value="Kijelentkezés">
             </form>
             <form action="assets/controller/profil_controller.php" method="POST" id="del">
                 <label for="delete"><b>Fiók törlése:</b></label><br>
                 <input type="submit" name="delete" id="delete" value="Fiok törlése">
             </form>
+        </div>
+    </div>
+    <div class="bought">
+        <div class="bought-produts">
+            <h2>Eladott termékek:</h2>
+            <table class="bought-table">
+                <tr>
+                    <th>Dátum</th>
+                    <th>Termék neve</th>
+                    <th>Ár</th>
+                    <th>Mennyiség</th>
+                </tr>
+                <?php
+                $soldProducts = loadBought();
+                if (!empty($soldProducts["eladott_ruhak"])) {
+                    foreach ($soldProducts["eladott_ruhak"] as $date => $ruhak) {
+                        foreach ($ruhak as $ruha) {
+                            $nev = $ruha["ruhanev"];
+                            $ar = $ruha["ar"];
+                            $db = $ruha["db"];
+                            echo "<tr><td>$date</td><td>$nev</td><td>$ar FT</td><td>$db</td></tr>";
+                        }
+                    }
+                } else {
+                    echo "<tr><td colspan='4'>Nincsenek eladott termékek.</td></tr>";
+                }
+                ?>
+            </table>
         </div>
     </div>
 

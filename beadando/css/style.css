@@ -297,6 +297,39 @@ input[type="submit"]:hover {
     float: right;
 }
 
+.bought {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+.bought .bought-products h2 {
+    margin-bottom: 20px;
+}
+
+.bought .bought-table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.bought .bought-table th, .bought .bought-table td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+
+.bought .bought-table th {
+    background-color: #aaaaaa;
+}
+
+.bought .bought-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.bought .bought-table tr:hover {
+    background-color: #8e8e8e;
+}
 /*------Profil--------*/
 
 /*------Ruhák--------*/
@@ -343,7 +376,7 @@ input[type="submit"]:hover {
     font-size: 1rem;
 }
 
-#add_cart {
+.add_cart {
     width: 30px;
     height: 30px;
     cursor: pointer;
@@ -351,12 +384,12 @@ input[type="submit"]:hover {
     transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
-#add_cart:hover {
+.add_cart:hover {
     transform: scale(1.35);
     background-color: #8e8e8e;
 }
 
-/*------Ruhák-------- */
+/*------Ruhác-------- */
 
 /*------------------Kapcsolat------------------*/
 .blank {
@@ -470,27 +503,40 @@ h2 {
 
 .signup form fieldset label {
     text-align: center;
+    font-size: 1.2vw;
 }
 
 .signup form fieldset input {
-    position: initial;
-    border: solid 1px black;
+    position: center;
+    font-size: 1.2vw;
     text-align: center;
     margin: 15px 35px;
+
+    width: 25vw;
+    height: 3vw;
+    border-radius: 4vw;
+    outline: none;
+    border: none;
+}
+
+#sex label, #sex a{
+    font-size: 1.2vw;
 }
 
 #F, #N, #E{
     width: 10px;
     height: 10px;
-    margin: 0 1vw 0 0.3vw;
+    margin: 0 2vw 0 2vw;
     text-align: center;
+    transform: scale(2);
 }
 
-#signup_reset:hover,#signup_submit:hover {
+#signup_reset:hover, #signup_submit:hover {
     transition: all 0.3s ease-in;
     color: #0088a9;
     border: 4px solid #8e8e8e;
 }
+
 /*----signup----*/
 
 /*-----ADMIN------*/
