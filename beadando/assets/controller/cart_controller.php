@@ -3,20 +3,24 @@
     $errors = [];
     $cart = loadCart();
 
-
-    deleteCart($_POST["nev"]);
+    if (isset($_POST["buy"])) {
+        buyProducts();
+        header("Location: ../../profil.php");
+        exit;
+    } 
     
     if (isset($_POST["change"])) {
+        $data = [
+            "ruhanev"=> $_POST["nev"],
+            "ar"=> $_POST["ar"],
+            "db"=> $_POST["db"]
+        ];
+        changeCart($data);
+        
+    } elseif(isset($_POST["delete"])){
         deleteCart($_POST["nev"]);
-        if($_POST["db"]>0){
-            $data = [
-                "ruhanev"=> $_POST["nev"],
-                "ar"=> $_POST["ar"],
-                "db"=> $_POST["db"]
-            ];
-            saveCart($data);
-        }
     }
     
     header("Location: ../../kosar.php");
+
 ?>

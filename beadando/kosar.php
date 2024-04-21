@@ -43,6 +43,9 @@
 
         </table>
         <p class='osszeg'>Összesen: <?php echo $total ?> Ft</p>
+        <form method='post' action="assets/controller/cart_controller.php">
+            <input type="submit" name="buy" value="Vásárlás">
+        </form>
     </div>
 <?php } else { ?>
     <div class='cart'>

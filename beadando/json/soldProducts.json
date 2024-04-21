@@ -1,0 +1,19 @@
+{
+    "eladott_ruhak": [
+        {
+            "ruhanev": "Simple pulóver",
+            "ar": "4.999",
+            "db": 2
+        },
+        {
+            "ruhanev": "Mupa pulóver",
+            "ar": "9.999",
+            "db": 1
+        },
+        {
+            "ruhanev": "Emoji pulóver",
+            "ar": "11.999",
+            "db": "5"
+        }
+    ]
+}
